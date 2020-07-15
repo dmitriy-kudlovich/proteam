@@ -22,7 +22,14 @@ block content
             .buttons-first-row-wrapper
                 +file-button("Выбрать файл")
             .buttons-first-row-wrapper
-                +watch-button("Смотреть") 
+                +watch-button("Смотреть")
+            .buttons-first-row-wrapper
+                +delete-button("Удалить")
+            .buttons-first-row-wrapper
+                +pagination-button("вперед")
+            .buttons-first-row-wrapper
+                +post-pagination-button("назад", "вперед")             
+                  
 
     //- Код для вызова компонента
     .ui-kit__component-code
@@ -30,7 +37,10 @@ block content
             +primary-button("Отправить")
             +secondary-button("Отмена")
             +file-button("Выбрать файл")
-            +watch-button("Смотреть") 
+            +watch-button("Смотреть")
+            +delete-button("Удалить") 
+            +pagination-button("вперед")
+            +post-pagination-button("назад", "вперед")             
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -45,10 +55,20 @@ block content
                     button.primary-button-item&attributes(attributes) #{text}          
             mixin secondary-button(text)
                 .secondary-button
-                    a.secondary-button-item&attributes(attributes) #{text}             
+                    a(href="#").secondary-button-item&attributes(attributes) #{text}             
             mixin file-button(text)
                 .file-button
                     button.file-button-item&attributes(attributes) #{text}           
             mixin watch-button(text)             
                 .watch-button
-                    a.watch-button-item&attributes(attributes) #{text}
+                    a(href="#").watch-button-item&attributes(attributes) #{text}
+            mixin delete-button(text)             
+                .delete-button
+                    button.delete-button-item&attributes(attributes) #{text}
+            mixin pagination-button(text)             
+                .pagination-button
+                    a(href="#").pagination-button-item&attributes(attributes) #{text}
+            mixin post-pagination-button(text1, text2)             
+                .post-pagination-button
+                    a(href="#").post-pagination-button-item.post-pagination-button-item--left&attributes(attributes) #{text1}
+                    a(href="#").post-pagination-button-item&attributes(attributes) #{text2}

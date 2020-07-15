@@ -1,6 +1,6 @@
 .buttons-first-row {
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+  width: 800px;
 }
 .buttons-first-row-wrapper {
   margin-bottom: 25px;
@@ -45,6 +45,8 @@
 
   &:hover {
     background-color: rgba(71, 137, 215, 0.3);
+    text-decoration: none;
+    color: #000000;
   }
   &:active,
   &:focus {
@@ -82,8 +84,92 @@
   font-size: 16px;
   line-height: 20px;
   color: #1647ed;
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border: 3px solid rgba(126, 155, 189, 0.3);
   border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: #1647ed;
+  }
+}
+.delete-button-item {
+  padding: 5px 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #c93535;
+  border-radius: 57px;
+  outline: none;
+  border: none;
+  transition: 0.4s ease-in;
+
+  &:hover {
+    background-color: #e81f1f;
+  }
+  &:active,
+  &:focus {
+    background-color: #a01717;
+    outline: none;
+  }
+}
+.pagination-button-item {
+  padding: 10px 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+  background-color: #eaeff2;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+
+  &:hover {
+    background-color: #dde8f6;
+    text-decoration: none;
+    color: #000000;
+  }
+  &:active,
+  &:focus {
+    background-color: #c3cfde;
+    outline: none;
+  }
+}
+.post-pagination-button {
+  height: 50px;
+  display: flex;
+}
+.post-pagination-button-item {
+  padding: 15px 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid rgba(126, 155, 189, 0.3);
+  box-sizing: border-box;
+  border-radius: 0px 8px 8px 0px;
+  color: #7e9bbd;
+  text-align: center;
+  flex-grow: 1;
+
+  &:hover {
+    background-color: #eff6fb;
+    border: 1px solid rgba(126, 155, 189, 0.3);
+    text-decoration: none;
+    color: #4374ad;
+  }
+  &:active,
+  &:focus {
+    color: #ffffff;
+    background-color: #9bc3dc;
+    border: 1px solid rgba(126, 155, 189, 0.3);
+    outline: none;
+  }
+}
+.post-pagination-button-item--left {
+  border-radius: 8px 0px 0px 8px;
 }

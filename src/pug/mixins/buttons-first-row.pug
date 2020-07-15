@@ -3,10 +3,20 @@ mixin primary-button(text)
         button.primary-button-item #{text}          
 mixin secondary-button(text)
     .secondary-button
-        a.secondary-button-item #{text}             
+        a(href="#").secondary-button-item #{text}             
 mixin file-button(text)
     .file-button
         button.file-button-item #{text}           
 mixin watch-button(text)             
     .watch-button
-        a.watch-button-item #{text}
+        a(href="#").watch-button-item #{text}
+mixin delete-button(text)             
+    .delete-button
+        button.delete-button-item #{text}
+mixin pagination-button(text)             
+    .pagination-button
+        a(href="#").pagination-button-item #{text}
+mixin post-pagination-button(text1, text2)             
+    .post-pagination-button
+        a(href="#").post-pagination-button-item.post-pagination-button-item--left #{text1}
+        a(href="#").post-pagination-button-item #{text2}
