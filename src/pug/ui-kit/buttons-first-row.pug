@@ -1,0 +1,54 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки первый ряд - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Кнопки первый ряд
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .buttons-first-row
+            .buttons-first-row-wrapper
+                +primary-button("Отправить")
+            .buttons-first-row-wrapper
+                +secondary-button("Отмена")
+            .buttons-first-row-wrapper
+                +file-button("Выбрать файл")
+            .buttons-first-row-wrapper
+                +watch-button("Смотреть") 
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +primary-button("Отправить")
+            +secondary-button("Отмена")
+            +file-button("Выбрать файл")
+            +watch-button("Смотреть") 
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/buttons-first-row.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin primary-button(text)
+                .primary-button
+                    button.primary-button-item&attributes(attributes) #{text}          
+            mixin secondary-button(text)
+                .secondary-button
+                    a.secondary-button-item&attributes(attributes) #{text}             
+            mixin file-button(text)
+                .file-button
+                    button.file-button-item&attributes(attributes) #{text}           
+            mixin watch-button(text)             
+                .watch-button
+                    a.watch-button-item&attributes(attributes) #{text}
