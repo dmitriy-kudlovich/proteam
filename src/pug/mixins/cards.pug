@@ -1,0 +1,11 @@
+mixin cards-project(text, img, link, title1, title2)
+    .card-project
+        .card-project__subtitle
+            p #{text}
+        a(href="#").card-project__img
+            img(src="../img/Cards/project-card/" + img, alt="projectCardImg-1")
+        .card-project__title
+            .card-project__title-item
+                a(href=link) #{title1}
+            .card-project__title-item
+                a(href=link) #{title2}
