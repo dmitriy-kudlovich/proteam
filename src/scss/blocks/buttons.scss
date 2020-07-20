@@ -1,14 +1,16 @@
-.buttons-first-row {
+.buttons {
   text-align: center;
   width: 800px;
 }
-.buttons-first-row-wrapper {
+
+.buttons-wrapper {
   margin-bottom: 25px;
   &:last-child {
     margin-bottom: 0;
   }
 }
-.primary-button-item {
+
+.primary-button {
   padding: 13px 20px;
   font-family: Montserrat, sans-serif;
   font-weight: 700;
@@ -30,7 +32,9 @@
     outline: none;
   }
 }
-.secondary-button-item {
+
+.secondary-button {
+  display: inline-block;
   padding: 13px 20px;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
@@ -55,7 +59,8 @@
     transition: none;
   }
 }
-.file-button-item {
+
+.file-button {
   padding: 10px;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
@@ -77,7 +82,9 @@
     outline: none;
   }
 }
-.watch-button-item {
+
+.watch-button {
+  display: inline-block;
   padding: 13px 20px;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
@@ -95,7 +102,8 @@
     color: #1647ed;
   }
 }
-.delete-button-item {
+
+.delete-button {
   padding: 5px 20px;
   font-family: Montserrat, sans-serif;
   font-weight: bold;
@@ -117,7 +125,9 @@
     outline: none;
   }
 }
-.pagination-button-item {
+
+.pagination-button {
+  display: inline-block;
   padding: 10px 20px;
   font-family: Montserrat, sans-serif;
   font-weight: bold;
@@ -140,10 +150,13 @@
     outline: none;
   }
 }
+
 .post-pagination-button {
+  display: inline-block;
   height: 50px;
   display: flex;
 }
+
 .post-pagination-button-item {
   padding: 15px 0;
   font-family: Montserrat, sans-serif;
@@ -170,6 +183,7 @@
     outline: none;
   }
 }
+
 .post-pagination-button-item--left {
   border-radius: 8px 0px 0px 8px;
 }
