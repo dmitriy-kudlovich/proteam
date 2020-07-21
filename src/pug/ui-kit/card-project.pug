@@ -3,38 +3,38 @@ include ./mixins/*.pug
 include ./../mixins/*.pug
 
 block variables
-    - var title = 'Карточки - UI-kit и HTML фреймворк - Документация';
+    - var title = 'Карточка проекта - UI-kit и HTML фреймворк - Документация';
     - var pageClass = 'body--dashboard';
 
 block content
 
     //- Заголовок компонента
     h1.ui-kit__component-title.
-        Карточки
+        Карточка проекта
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +cards-project("HTML, CSS, wordpress", "projectCardImg-1.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ")
+        +card-project("HTML, CSS, wordpress", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +cards-project(badgeText, img, title, link="#")
+            +card-project(badgeText, img, title, link="#")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
         Название файла:
-        mixins/cards.pug
+        mixins/card-project.pug
         
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin cards-project(badgeText, img, title, link="#")
+            mixin card-project(badgeText, img, title, link="#")
                 .card-project
-                    .card-project__subtitle #{badgeText}
+                    .card-project__subtitle&attribute(attribute) #{badgeText}
                     a(href= link).card-project__img
-                        img(src="../img/Cards/project-card/" + img, alt="projectCardImg-1")
+                        img(src="../img/cards/project-card/" + img, alt="project-card-img-01")
                     .card-project__title
                         .card-project__title-item
-                            a(href= link) #{title}
+                            a(href= link)&attribute(attribute) #{title}
                     

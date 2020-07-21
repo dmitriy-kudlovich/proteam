@@ -5,9 +5,7 @@
   height: 370px;
   box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
 }
-.card-project__img {
-  display: inline-block;
-}
+
 .card-project__subtitle {
   position: absolute;
   padding: 7px 10px;
@@ -22,6 +20,10 @@
   p {
     margin: 0;
   }
+}
+
+.card-project__img {
+  display: inline-block;
 }
 
 .card-project__title {
