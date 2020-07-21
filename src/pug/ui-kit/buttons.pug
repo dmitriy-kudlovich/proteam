@@ -28,8 +28,7 @@ block content
             .buttons-wrapper
                 +pagination-button("вперед")
             .buttons-wrapper
-                +post-pagination-button("назад", "вперед")
-
+                +post-pagination-button()
 
     //- Код для вызова компонента
     .ui-kit__component-code
@@ -40,7 +39,7 @@ block content
             +watch-button("Смотреть")
             +delete-button("Удалить")
             +pagination-button("вперед")
-            +post-pagination-button("назад", "вперед")
+            +post-pagination-button()
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -52,16 +51,22 @@ block content
         pre.
             mixin primary-button(text)
                 button.primary-button&attributes(attributes) #{text}
+
             mixin secondary-button(text, link="#")
                 a(href= link).secondary-button&attributes(attributes) #{text}
+
             mixin file-button(text)
                 button.file-button&attributes(attributes) #{text}
+
             mixin watch-button(text, link="#")
                 a(href= link).watch-button&attributes(attributes) #{text}
+
             mixin delete-button(text)
                 button.delete-button&attributes(attributes) #{text}
+
             mixin pagination-button(text, link="#")
                 a(href= link).pagination-button&attributes(attributes) #{text}
+                
             mixin post-pagination-button(text1, text2, link1="#", link2="#")
                 .post-pagination-button
                     a(href= link1).post-pagination-button-item.post-pagination-button-item--left&attributes(attributes) #{text1}
