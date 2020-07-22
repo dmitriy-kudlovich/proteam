@@ -1,0 +1,50 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция Обо мне - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция Обо мне
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        section.about-me
+            +about-me-resume()
+            +about-me-direction()
+                        
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            section.about-me - оболочка секции
+                +about-me-resume() - отдельняя часть "обо мне"
+                +about-me-direction() - отдельная часть "направления"
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/about-me.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin about-me-direction()
+                .about-me-direction
+                    h3.about-me-direction__title направления, которыми я занимаюсь
+                    .about-me-direction__list
+                        ul
+                            li Верстка сайтов 
+                            li Frontend
+                            li UI/UX дизайн
+
+            mixin about-me-resume()
+                .about-me-resume
+                    h3.about-me-resume__title обо мне
+                    .about-me-resume__text
+                        p| Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!      
+                      
