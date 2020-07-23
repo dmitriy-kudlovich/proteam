@@ -1,9 +1,12 @@
 .about-me {
-  display: flex;
-  justify-content: center;
   padding: 60px 150px;
   max-width: 1440px;
   background-color: #f5f7fa;
+}
+
+.about-me-wrapper{
+  display: flex;
+  justify-content: center;
 }
 
 .about-me-resume {
