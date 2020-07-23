@@ -1,0 +1,45 @@
+.card-project {
+  position: relative;
+  padding: 20px;
+  width: 540px;
+  height: 370px;
+  box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+}
+
+.card-project__subtitle {
+  position: absolute;
+  padding: 7px 10px;
+  background-color: #000000;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  p {
+    margin: 0;
+  }
+}
+
+.card-project__img {
+  display: inline-block;
+}
+
+.card-project__title {
+  padding: 20px 0 10px;
+  margin: 0;
+
+  a {
+      font-family: Playfair Display, serif;
+      font-weight: normal;
+      font-size: 24px;
+      color: #000000;
+      line-height: 30px;
+      letter-spacing: .5px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
