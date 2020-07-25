@@ -14,12 +14,12 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo.ui-kit__component-demo--grey
-        include ./sections/login-form.pug
+        include ../sections/login-form.pug
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            include ./sections/login-form.pug - вызов секции 
+            include ../sections/login-form.pug - вызов секции 
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -30,7 +30,7 @@ block content
     .ui-kit__element-code
         pre.
             sections.login-form
-                .login-form-wrapper
+                form.login-form-wrapper
                     h2.login-form-wrapper__title Вход на сайт
                     .login-form-wrapper__buttons
                         input(type="text" placeholder="Email" class="login-form-input")
