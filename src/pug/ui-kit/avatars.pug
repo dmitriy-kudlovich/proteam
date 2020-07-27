@@ -1,0 +1,12 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Общие элементы';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    +avatar("avatar.jpg")
+    +avatar-mini("avatar.jpg")
