@@ -17,14 +17,10 @@
   padding: 40px 0 125px;
 }
 
-.footer-container {
+.footer-row {
   display: flex;
   justify-content: space-between;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0px 165px 0px;
-
 }
 
 .footer-wrapper-text p {
@@ -37,20 +33,20 @@
 }
 
 .footer-wrapper-link {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .footer-wrapper-link-svg {
-    display: inline-block;
-    margin-right: 35px;
-    transition: opacity .3s ease-in;
+  display: inline-block;
+  margin-right: 35px;
+  transition: opacity 0.3s ease-in;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 
-    &:hover {
-        opacity: .9;
-    }
+  &:hover {
+    opacity: 0.9;
+  }
 }
