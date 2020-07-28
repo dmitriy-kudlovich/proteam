@@ -1,0 +1,36 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция статус - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция статус
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/status.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/status.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/status.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            section.status
+                a(href="#").status-row
+                    span.status-row-status Свободен для новых проектов
+                    p.status-row-text Рассматриваю предложения по верстке и frontend разработке. Подробности
+                    span.status-row-svg&attribute(attribute)
