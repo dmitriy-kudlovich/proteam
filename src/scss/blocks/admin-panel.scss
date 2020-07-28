@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -39,8 +38,8 @@
 
   &:hover,
   &:focus {
-    color: #c90000;
-    stroke: #c90000;
+    color: #ffc800;
+    stroke: #ffc800;
   }
 }
 
@@ -51,8 +50,8 @@
 
 .admin-panel-nav__link-svg--messages {
   &::after {
+    content: attr(data-line);
     position: absolute;
-    content: "8";
     font-size: 12px;
     width: 20px;
     height: 20px;
@@ -67,7 +66,7 @@
 .admin-panel-nav__link-svg--comment {
   &::after {
     position: absolute;
-    content: "15";
+    content: attr(data-line);
     font-size: 12px;
     width: 20px;
     height: 20px;
