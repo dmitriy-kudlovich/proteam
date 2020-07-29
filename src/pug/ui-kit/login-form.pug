@@ -1,0 +1,44 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Форма входа - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Форма входа
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo.ui-kit__component-demo--grey
+        include ../sections/login-form.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/login-form.pug - вызов секции 
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/login-form.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            sections.login-form
+                form.login-form-wrapper
+                    h2.login-form-wrapper__title Вход на сайт
+                    .login-form-wrapper__buttons
+                        input(type="text" placeholder="Email" class="login-form-input")
+                        input(type="text" placeholder="Пароль" class="login-form-input")
+                        button(class="login-form-button") Вход на сайт
+                    .login-form-wrapper__link
+                        .login-form-wrapper__link-item
+                            a(href="#") Забыл пароль
+                        .login-form-wrapper__link-item
+                            a(href="#") Регистрация
+            

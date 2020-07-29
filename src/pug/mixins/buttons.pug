@@ -1,0 +1,23 @@
+mixin primary-button(text)
+    button.primary-button #{text}   
+
+mixin secondary-button(text, link="#")
+    a(href= link).secondary-button #{text}  
+
+mixin file-button(text)
+    button.file-button #{text}
+
+mixin watch-button(text, link="#")             
+    a(href= link).watch-button #{text}
+
+mixin delete-button(text)             
+    button.delete-button #{text}
+
+mixin pagination-button(text, link="#")             
+    a(href= link).pagination-button #{text}
+
+mixin post-pagination-button(text1="Назад", text2="Вперёд", link1="#", link2="#")             
+    .post-pagination-button
+        a(href= link1).post-pagination-button-item.post-pagination-button-item--left #{text1}
+        a(href= link2).post-pagination-button-item #{text2}
+        
