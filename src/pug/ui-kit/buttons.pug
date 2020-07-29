@@ -1,0 +1,73 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Кнопки проекта
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .buttons
+            .buttons-wrapper
+                +primary-button("Отправить")
+            .buttons-wrapper
+                +secondary-button("Отмена")
+            .buttons-wrapper
+                +file-button("Выбрать файл")
+            .buttons-wrapper
+                +watch-button("Смотреть")
+            .buttons-wrapper
+                +delete-button("Удалить")
+            .buttons-wrapper
+                +pagination-button("вперед")
+            .buttons-wrapper
+                +post-pagination-button()
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +primary-button("Отправить")
+            +secondary-button("Отмена")
+            +file-button("Выбрать файл")
+            +watch-button("Смотреть")
+            +delete-button("Удалить")
+            +pagination-button("вперед")
+            +post-pagination-button()
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/buttons.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin primary-button(text)
+                button.primary-button&attributes(attributes) #{text}
+
+            mixin secondary-button(text, link="#")
+                a(href= link).secondary-button&attributes(attributes) #{text}
+
+            mixin file-button(text)
+                button.file-button&attributes(attributes) #{text}
+
+            mixin watch-button(text, link="#")
+                a(href= link).watch-button&attributes(attributes) #{text}
+
+            mixin delete-button(text)
+                button.delete-button&attributes(attributes) #{text}
+
+            mixin pagination-button(text, link="#")
+                a(href= link).pagination-button&attributes(attributes) #{text}
+                
+            mixin post-pagination-button(text1, text2, link1="#", link2="#")
+                .post-pagination-button
+                    a(href= link1).post-pagination-button-item.post-pagination-button-item--left&attributes(attributes) #{text1}
+                    a(href= link2).post-pagination-button-item&attributes(attributes) #{text2}

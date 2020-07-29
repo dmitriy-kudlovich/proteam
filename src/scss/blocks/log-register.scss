@@ -1,0 +1,36 @@
+.log-register {
+  position: relative;
+  width: 100%;
+}
+
+.log-register-container {
+  padding: 60px 20px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background-color: #eaeff2;
+  border-radius: 8px;
+}
+
+.log-register-text {
+  display: inline-block;
+
+  p {
+    margin-bottom: 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+
+.log-register-text__link {
+  color: #1647ed;
+  text-decoration-line: underline;
+  transition: 0.4s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: #0a2374;
+  }
+}
