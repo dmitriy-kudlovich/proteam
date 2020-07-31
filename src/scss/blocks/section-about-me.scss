@@ -65,4 +65,8 @@
     li {
         margin-bottom: 0px!important; 
     }
+
+    li::before {
+        display: none!important;
+    }
 } 

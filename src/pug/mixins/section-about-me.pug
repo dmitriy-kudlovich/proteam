@@ -1,12 +1,26 @@
-mixin section-about-me("./../img/section-about-me.jpg", title, title2)
+//- mixin section-about-me(filePath="./../img/section-about-me.jpg", title, title2, skills)
+//-     .section-about-me
+//-         .container
+//-             .section-about-me__row
+//-                 .section-about-me__img-wrapper
+//-                     img.section-about-me__img(src= filePath alt="Обо мне")
+//-                 .section-about-me__right-column
+//-                     h4.section-about-me__title #{title}
+//-                     .section-about-me__text 
+//-                         block
+//-                     h4.section-about-me__title #{title2}
+//-                     +section-about-me__list(skills)
+
+
+mixin section-about-me(object)
     .section-about-me
         .container
             .section-about-me__row
                 .section-about-me__img-wrapper
-                    img.section-about-me__img(src= filePath, alt="Обо мне")
+                    img.section-about-me__img(src= object.filePath alt="Обо мне")
                 .section-about-me__right-column
-                    h4.section-about-me__title #{title}
+                    h4.section-about-me__title #{object.title}
                     .section-about-me__text 
                         block
-                    h4.section-about-me__title #{title2}
-                    +section-about-me__list([{text: "Верстка сайтов"}, {text: 'Frontend'}, {text: 'UI/UX дизайн'}])
+                    h4.section-about-me__title #{object.title2}
+                    +section-about-me__list(object.skills)

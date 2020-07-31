@@ -14,68 +14,92 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        //- +section-about-me("./../img/section-about-me.jpg", "обо мне", "чем могу быть полезен")
-        //-     p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+        - 
+            var object ={
+                    filePath: "./../img/section-about-me.jpg",
+                    title: "обо мне",
+                    title2: "чем могу быть полезен",
+                    skills: [
+                        {text: "Верстка сайтов"}, 
+                        {text: 'Frontend'}, 
+                        {text: 'UI/UX дизайн'}
+                    ]        
+                }
 
-        .section-about-me
-            .container
-                .section-about-me__row
-                    .section-about-me__img-wrapper
-                        img.section-about-me__img(src="./../img/section-about-me.jpg", alt="Обо мне")
-                    .section-about-me__right-column
-                        h4.section-about-me__title обо мне
-                        p.section-about-me__text Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
-                        h4.section-about-me__title чем могу быть полезен
-                        ul.section-about-me__list 
-                            li Верстка сайтов
-                            li Frontend
-                            li UI/UX дизайн
+        +section-about-me(object)
+            p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +section-about-me("./../img/section-about-me.jpg", "обо мне", "чем могу быть полезен")
-                p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+            Способ 1 (описала параметры в виде объекта и передала их как 1 объект):
+                - 
+                    var object ={
+                            filePath: "./../img/section-about-me.jpg",
+                            title: "обо мне",
+                            title2: "чем могу быть полезен",
+                            skills: [
+                                {text: "Верстка сайтов"}, 
+                                {text: 'Frontend'}, 
+                                {text: 'UI/UX дизайн'}
+                            ]        
+                        }
+
+                +section-about-me(object)
+                    p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+
+
+            Способ 2 (передала параметром массив из вложенного миксина -- вынесла его вверхний миксин):
+                +section-about-me("./../img/section-about-me.jpg", "обо мне", "чем могу быть полезен", [{text: "Верстка сайтов"}, {text: 'Frontend'}, {text: 'UI/UX дизайн'}])
+                    p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
         Название файла:
         mixins/section-about-me.pug
-        mixins/section-about-me__list.pug
 
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            .section-about-me
-                .container
-                    .section-about-me__row
-                        .section-about-me__img-wrapper
-                            img.section-about-me__img(src="./../img/section-about-me.jpg", alt="Обо мне")
-                        .section-about-me__right-column
-                            h4.section-about-me__title обо мне
-                            p.section-about-me__text Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
-                            h4.section-about-me__title чем могу быть полезен
-                            ul.section-about-me__list 
-                                li Верстка сайтов
-                                li Frontend
-                                li UI/UX дизайн
+            Способ 1 (описала параметры в виде объекта и передала их как 1 объект):
+                mixin section-about-me(object)
+                    .section-about-me
+                        .container
+                            .section-about-me__row
+                                .section-about-me__img-wrapper
+                                    img.section-about-me__img(src= object.filePath alt="Обо мне")
+                                .section-about-me__right-column
+                                    h4.section-about-me__title #{object.title}
+                                    .section-about-me__text 
+                                        block
+                                    h4.section-about-me__title #{object.title2}
+                                    +section-about-me__list(object.skills)
 
+            Способ 2 (передала параметром массив из вложенного миксина -- вынесла его вверхний миксин):
+                mixin section-about-me(filePath="./../img/section-about-me.jpg", title, title2, skills)
+                    .section-about-me
+                        .container
+                            .section-about-me__row
+                                .section-about-me__img-wrapper
+                                    img.section-about-me__img(src= filePath alt="Обо мне")
+                                .section-about-me__right-column
+                                    h4.section-about-me__title #{title}
+                                    .section-about-me__text 
+                                        block
+                                    h4.section-about-me__title #{title2}
+                                    +section-about-me__list(skills)
 
-            mixin section-about-me("./../img/section-about-me.jpg", title, title2)
+            Способ 3 (просто код сверстанной секции):
                 .section-about-me
                     .container
                         .section-about-me__row
                             .section-about-me__img-wrapper
-                                img.section-about-me__img(src= filePath, alt="Обо мне")
+                                img.section-about-me__img(src="./../img/section-about-me.jpg", alt="Обо мне")
                             .section-about-me__right-column
-                                h4.section-about-me__title # {title}
-                                .section-about-me__text 
-                                    block
-                                h4.section-about-me__title # {title2}
-                                +section-about-me__list([{text: "Верстка сайтов"}, {text: 'Frontend'}, {text: 'UI/UX дизайн'}])
-
-
-            mixin section-about-me__list(list)
-                ul.section-about-me__list
-                    each item in list
-                        li # {item.text}
+                                h4.section-about-me__title обо мне
+                                p.section-about-me__text Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+                                h4.section-about-me__title чем могу быть полезен
+                                ul.section-about-me__list 
+                                    li Верстка сайтов
+                                    li Frontend
+                                    li UI/UX дизайн
