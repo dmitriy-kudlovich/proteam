@@ -3,7 +3,7 @@ include ./mixins/*.pug
 include ./../mixins/*.pug
 
 block variables
-    - var title = 'Заголовки';
+    - var title = 'Черная плашка';
     - var pageClass = 'body--dashboard';
 
 block content
@@ -12,24 +12,24 @@ block content
 
     //-Заголовок компонента
     h1.ui-kit__component-title.
-        Заголовки
+        Черная плашка
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +section-title("Новые записи в блоге")
+        +black-label("Путешествия")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +section-title("Текст заголовка") 
+            +black-label("Текст плашки")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
         Название файла:
-        mixins/section-title.pug
+        mixins/black-label.pug
 
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin section-title(text)
-                h2.section-title= text
+            mixin black-label(text)
+                .label-card-black= text
