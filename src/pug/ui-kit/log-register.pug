@@ -1,0 +1,37 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Вход или Регистрация - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Вход или Регистрация
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/log-register.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/log-register.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/log-register.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            section.log-register
+                .log-register-container
+                    .log-register-text
+                        p&attribute(attribute) Войдите или&attribute(attribute) зарегистрируйтесь]
+                        p чтобы оставить комментарий
+                        

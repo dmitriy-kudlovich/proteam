@@ -1,0 +1,43 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Пагинация - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Пагинация
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/pagination.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/pagination.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/pagination.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            section.pagination
+                .pagination-wrap-item
+                    +pagination-button("назад")
+                .pagination-wrap-item.pagination-wrap-item--active
+                    +pagination-button("1")
+                .pagination-wrap-item
+                    +pagination-button("2")
+                .pagination-wrap-item
+                    +pagination-button("3")
+                .pagination-wrap-item
+                    +pagination-button("вперед")
+                    
