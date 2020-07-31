@@ -1,0 +1,8 @@
+mixin timeline(date= "Дата", heading= "Заголовок")
+    .timeline__row
+        .timeline__row__point
+        .timeline__row__text
+            .timeline__row__text__date= date
+            .timeline__row__text__heading= heading
+            .timeline__row__text__desc
+                block
