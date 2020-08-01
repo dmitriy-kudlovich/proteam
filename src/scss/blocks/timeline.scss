@@ -28,7 +28,7 @@
     }
 }
 
-.timeline__row__point {
+.timeline__row-point {
     margin-top: 19px;
     margin-right: 35px;
     width: 32px;
@@ -38,20 +38,20 @@
     border-radius: 50%;
 }
 
-.timeline__row:nth-child(even) .timeline__row__point {
+.timeline__row:nth-child(even) .timeline__row-point {
     margin-right: 0;
     margin-left: 41px;
 }
 
-.timeline__row__text {
+.timeline__row-text {
     width: 505px;
 }
 
-.timeline__row:nth-child(even) .timeline__row__text {
+.timeline__row:nth-child(even) .timeline__row-text {
     text-align: right;
 }
 
-.timeline__row__text__date {
+.timeline__row-text-date {
     margin-bottom: 5px;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -62,14 +62,15 @@
     text-transform: uppercase;
 }
 
-.timeline__row__text__heading {
+.timeline__row-text-heading {
     margin-bottom: 5px;
     font-family: "Playfair Display", serif;
     font-weight: bold;
     font-size: 22px;
     line-height: 120%;
 }
-.timeline__row__text__desc {
+
+.timeline__row-text-desc {
     font-family: "Playfair Display", serif;
     font-size: 18px;
     line-height: 170%;
