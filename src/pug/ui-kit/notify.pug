@@ -1,0 +1,55 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Нотификация
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .container
+            .notify
+                .notify__header.notify-error Сообщение об ошибке
+                .notify__text
+                    p Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
+                    p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+
+            .notify
+                .notify__header.notify-action Сообщение о действии
+                .notify__text
+                    p Здесь будет текст сообщения. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
+                    p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+
+            .notify
+                .notify__header.notify-success Сообщение об успехе
+                .notify__text
+                    p Здесь будет текст сообщения. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
+                    p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+            +notify("notify-error")
+            +notify("notify-action")
+            +notify("notify-success")
+
+
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +test-button('#!', 'Текст кнопки')
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/test-button.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin test-button(link, text="Перейти")
+                a(class="test-button" href= link)&attributes(attributes) #{text}

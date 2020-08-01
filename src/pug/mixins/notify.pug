@@ -1,0 +1,11 @@
+mixin notify(type)
+    .notify
+        .notify__header&attributes(attributes)
+        if type == "notify-error"
+            .notify__header.notify-error Сообщение об ошибке
+        if type == "notify-action"
+            .notify__header.notify-action Сообщение о действии
+        if type == "notify-success"
+            .notify__header.notify-success Сообщение об успехе
+        .notify__text
+            block
