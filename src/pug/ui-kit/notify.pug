@@ -3,7 +3,7 @@ include ./mixins/*.pug
 include ./../mixins/*.pug
 
 block variables
-    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var title = 'Нотификация - UI-kit и HTML фреймворк - Документация';
     - var pageClass = 'body--dashboard';
 
 block content
@@ -15,15 +15,9 @@ block content
     //- Демонстрация компонента
     .ui-kit__component-demo
         .container
-            +notify("notify-error")
-                p Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
-                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
-            +notify("notify-action")
-                p Здесь будет текст сообщения. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
-                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
-            +notify("notify-success")
-                p Здесь будет текст сообщения. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
-                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+            +notify("Сообщение об ошибке")(class="notify-error")
+            +notify("Сообщение об действии")(class="notify-action")
+            +notify("Сообщение об успехе")(class="notify-success")
 
 
 
