@@ -1,0 +1,18 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-wrap-item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pagination-wrap-item--active a {
+  background-color: rgba(139, 177, 223, 0.3);
+}

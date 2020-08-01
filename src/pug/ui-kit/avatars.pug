@@ -1,0 +1,40 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Аватарки';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //-Заголовок компонента
+    h1.ui-kit__component-title.
+        Аватары
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +avatar("avatar.jpg")
+        +avatar-mini("avatar.jpg")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +avatar("название изображения.расширение", "текст для атрибута alt")
+            +avatar-mini("название уменьшенного изображения.расширени", "текст для атрибута alt")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/avatar.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin avatar(pic, alt="avatar")
+                .avatar
+                    img(src="../img/avatars/"+pic alt= alt)
+
+            mixin avatar-mini(pic, alt="mini avatar")
+                .avatar.avatar--mini
+                    img(src="../img/avatars/"+pic alt= alt)

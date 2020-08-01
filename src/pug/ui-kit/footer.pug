@@ -1,0 +1,44 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Подвал - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Подвал
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/footer.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/footer.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/footer.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            section.footer-wrapper
+                .container
+                    .footer-row
+                        .footer-wrapper-text
+                            p © Юрий Ключевский
+                            p Создано в WebCademy.ru в 2020 году
+                        .footer-wrapper-link
+                            +footer-svg-youtube()
+                            +footer-svg-instagram()
+                            +footer-svg-facebook()
+                            +footer-svg-vk()
+                            +footer-svg-in()
+                            +footer-svg-github()
