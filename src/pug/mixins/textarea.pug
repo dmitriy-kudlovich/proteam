@@ -1,0 +1,6 @@
+mixin textarea(name)
+    textarea.textarea(name= name placeholder="Введите текст")
+
+mixin textarea-labeled(id, label_title, name)
+    label.textarea__label(for= id)= label_title
+    textarea.textarea.textarea--labeled(id= id name= name placeholder="Введите текст")
