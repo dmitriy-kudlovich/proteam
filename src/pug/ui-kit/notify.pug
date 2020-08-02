@@ -16,29 +16,25 @@ block content
     .ui-kit__component-demo
         .container
             +notify("Сообщение об ошибке")(class="notify-error")
+                | Ошибка
             +notify("Сообщение об действии")(class="notify-action")
+                | Необходимо совершить действие
             +notify("Сообщение об успехе")(class="notify-success")
-
-
 
     //- Код для вызова компонента
     .ui-kit__component-code
         p
-            strong Возможны три варианта параметра миксина:
+            strong Возможны три варианта присвоения класса в миксине:
         ul
             li notify-error
             li notify-action
             li notify-success
         pre.
-            +notify("notify-error")
-                p Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
-                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
-            +notify("notify-action")
-                p Здесь будет текст сообщения. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
-                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
-            +notify("notify-success")
-                p Здесь будет текст сообщения. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant. 
-                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+            +notify("Сообщение об ошибке")(class="notify-error")
+                | Ошибка
+            +notify("Сообщение об действии")(class="notify-action")
+                | Необходимо совершить действие
+            +notify("Сообщение об успехе")(class="notify-success")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -48,14 +44,11 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin notify(type)
+            mixin notify(notify_message)
                 .notify
-                    .notify__header&attributes(attributes)
-                    if type == "notify-error"
-                        .notify__header.notify-error Сообщение об ошибке
-                    if type == "notify-action"
-                        .notify__header.notify-action Сообщение о действии
-                    if type == "notify-success"
-                        .notify__header.notify-success Сообщение об успехе
-                    .notify__text
-                        block
+                    if block
+                        .notify__header&attributes(attributes)= notify_message
+                        .notify__text
+                            block
+                    else
+                        .notify__header&attributes(attributes)(style="border-radius: 6px")= notify_message
