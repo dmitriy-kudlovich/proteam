@@ -30,20 +30,13 @@
     border-radius: 4px;
   }
 
-  &:checked + label:before {
-    background-color: #fff;
-  }
-
   &:checked + label:after {
     content: "";
     position: absolute;
-    left: 7px;
-    top: 4px;
-    width: 6px;
+    left: 4px;
+    top: 5px;
+    width: 13px;
     height: 11px;
-    border: solid #1647ed;
-    border-width: 0 2px 2px 0;
-    border-radius: 1px;
-    transform: rotate(45deg);
+    background-image: url("../img/svg/check.svg");
   }
 }

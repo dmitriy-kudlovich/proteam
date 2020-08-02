@@ -15,14 +15,14 @@ block content
     //- Демонстрация компонента
     .ui-kit__component-demo
         .checkbox-wrapper
-            +checkbox('Опция 1', "styled-input-1", "styled-input-1", "checked")
-            +checkbox('Опция 2', "styled-input-2", "styled-input-2")
+            +checkbox('Опция 1', "styled-input-1", "checked")
+            +checkbox('Опция 2', "styled-input-2")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +checkbox('Опция 1', "styled-input-1", "styled-input-1", "checked")
-            +checkbox('Опция 2', "styled-input-2", "styled-input-2")
+            +checkbox('Опция 1', "styled-input-1", "checked")
+            +checkbox('Опция 2', "styled-input-2")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -32,7 +32,7 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin checkbox(text, id1, id2, checked)
+            mixin checkbox(text, id, checked)
                 .checkbox
-                    input(class="checkbox-input" id= id1 type="checkbox" value="value1" checked= checked)
-                    label(for= id2)&attribute(attribute) #{text}
+                    input(class="checkbox-input" id= id type="checkbox" value="value1" checked= checked)
+                    label(for= id)&attribute(attribute) #{text}
