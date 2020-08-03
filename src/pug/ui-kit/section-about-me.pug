@@ -1,0 +1,58 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция "Обо мне"';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция "Обо мне"
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/section-about-me.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/section-about-me.pug
+                - 
+                    var object ={
+                            filePath: "./../img/section-about-me.jpg",
+                            title: "обо мне",
+                            title2: "чем могу быть полезен",
+                            skills: [
+                                {text: "Верстка сайтов"}, 
+                                {text: 'Frontend'}, 
+                                {text: 'UI/UX дизайн'}
+                            ]        
+                        }
+
+                +section-about-me(object)
+                    p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/section-about-me.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin section-about-me(object)
+                .section-about-me
+                    .container
+                        .section-about-me__row
+                            .section-about-me__img-wrapper
+                                img.section-about-me__img(src= object.filePath alt="Обо мне")
+                            .section-about-me__right-column
+                                h4.section-about-me__title #{object.title}
+                                .section-about-me__text 
+                                    block
+                                h4.section-about-me__title #{object.title2}
+                                +section-about-me__list(object.skills)
+
