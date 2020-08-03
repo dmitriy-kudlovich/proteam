@@ -1,0 +1,39 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Инпуты - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Инпуты
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/input.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +input-with-title('Заголовок поста', 'Введите название записи')
+            +input-text('Ваше имя')
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/inputs.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin input-with-title(title, text)
+                .input-title
+                    h3&attributes(attributes)
+                input(type="text" placeholder= text class="input-text")
+
+            mixin input-text(text)
+                input(type="text" placeholder= text class="input-text")
