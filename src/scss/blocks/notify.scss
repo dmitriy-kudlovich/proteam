@@ -1,6 +1,6 @@
 .notify {
     margin-bottom: 25px;
-    width: 807px;
+    width: 100%;
     border-radius: 6px;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -40,4 +40,8 @@
 .notify-success {
     color: #fff;
     background-color: #61d392;
+}
+
+.notify__header--no-desc {
+    border-radius: 6px;
 }
