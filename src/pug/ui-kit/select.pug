@@ -1,0 +1,46 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Элемент select - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Элемент select
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/select.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/select.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/select.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .select
+                a(href="javascript:void(0);", class="slct") 
+                    span.slct-title Заметки путешественника:
+                    span.slct-svg 
+                        &attributes(attributes)
+                ul.drop
+                    li
+                        a(href="#") Что делать, когда делать нечего?
+                    li
+                        a(href="#") Как отдохнуть и не обанкротиться?
+                    li
+                        a(href="#") Как кайфануть в Звенигороде?
+                    li
+                        a(href="#") Доступный отдых в ОАЭ для каждого!
+                input(type="hidden", id="select")
