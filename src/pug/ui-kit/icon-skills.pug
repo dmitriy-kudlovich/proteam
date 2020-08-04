@@ -1,0 +1,37 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Иконка с навыками';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Иконка с навыками
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +icon-skills("html-5.svg", "HTML5")
+
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +icon-skills("html-5.svg", "HTML5")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/icon-skills.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin icon-skills(img, skill)
+                .icon-skills
+                    img.icon-skills__img(src="./../img/icons-skills/" + img, alt="Иконка с навыками")
+                    h4.icon-skills__text # {skill}
+                
