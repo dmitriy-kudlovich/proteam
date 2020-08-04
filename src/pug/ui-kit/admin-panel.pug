@@ -1,0 +1,57 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Админ панель - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Админ панель
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/admin-panel.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/admin-panel.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/admin-panel.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            section.admin-panel
+                .admin-panel-container
+                    .admin-panel-nav
+                        a(href="#").admin-panel-nav__link
+                            span admin-panel-nav__link-svg
+                                &attribute(attribute) <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            span Перейти в админ панель
+                        a(href="#").admin-panel-nav__link
+                            span admin-panel-nav__link-svg
+                                &attribute(attribute) <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            span Профиль
+                        a(href="#").admin-panel-nav__link
+                            span admin-panel-nav__link-svg.admin-panel-nav__link-svg--messages
+                                &attribute(attribute) <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 6L12 13L2 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            span Сообщения
+                        a(href="#").admin-panel-nav__link
+                            span admin-panel-nav__link-svg.admin-panel-nav__link-svg--comment
+                                &attribute(attribute) <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21 15C21 16.1046 20.1046 17 19 17H7L3 21V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V15Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            span Комментарии
+                        a(href="#").admin-panel-nav__link
+                            span admin-panel-nav__link-svg
+                                &attribute(attribute) <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 2L18 6L7 17H3V13L14 2V2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 22H21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            span Редактировать эту страницу
+                    .admin-panel-nav
+                        a(href="#").admin-panel-nav__link.admin-panel-nav__link--grey 
+                            span Выход

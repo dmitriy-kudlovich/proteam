@@ -1,0 +1,33 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Черная плашка';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //-Заголовок компонента
+    h1.ui-kit__component-title.
+        Черная плашка
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +black-label("Путешествия")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +black-label("Текст плашки")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/black-label.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin black-label(text)
+                .label-card-black= text
