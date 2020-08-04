@@ -1,0 +1,54 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Нотификация - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Нотификация
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .container
+            +notify("Сообщение об ошибке")(class="notify-error")
+                | Ошибка
+            +notify("Сообщение об действии")(class="notify-action")
+                | Необходимо совершить действие
+            +notify("Сообщение об успехе")(class="notify-success")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        p
+            strong Возможны три варианта присвоения класса в миксине:
+        ul
+            li notify-error
+            li notify-action
+            li notify-success
+        pre.
+            +notify("Сообщение об ошибке")(class="notify-error")
+                | Ошибка
+            +notify("Сообщение об действии")(class="notify-action")
+                | Необходимо совершить действие
+            +notify("Сообщение об успехе")(class="notify-success")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/notify.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin notify(notify_message)
+                .notify
+                    if block
+                        .notify__header&attributes(attributes)= notify_message
+                        .notify__text
+                            block
+                    else
+                        .notify__header.notify__header--no-desc&attributes(attributes)= notify_message

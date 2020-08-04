@@ -1,0 +1,8 @@
+mixin notify(notify_message)
+    .notify
+        if block
+            .notify__header&attributes(attributes)= notify_message
+            .notify__text
+                block
+        else
+            .notify__header.notify__header--no-desc&attributes(attributes)= notify_message
