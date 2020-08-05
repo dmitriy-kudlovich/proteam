@@ -15,17 +15,17 @@ block content
     //- Демонстрация компонента
     .ui-kit__component-demo
         .container
-            +textarea("textarea")
-            +textarea-labeled("labeled", "Содержимое поста", "textarea-labeled")
+            +textarea("post", "Введите текст поста")
+            +textarea("admin-message", "Введите текст сообщения", "Сообщение администратору")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
             Textarea без ярлыка:
-            +textarea("textarea")
+            +textarea("post", "Введите текст поста")
 
             Textarea с ярлыком:
-            +textarea-labeled("labeled", "Содержимое поста", "textarea-labeled")
+            +textarea("admin-message", "Введите текст сообщения", "Сообщение администратору")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -35,11 +35,9 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            Textarea без ярлыка:
-            mixin textarea(name)
-                textarea.textarea(name= name placeholder="Введите текст")
-
-            Textarea с ярлыком:
-            mixin textarea-labeled(id, label_title, name)
-                label.textarea__label(for= id)= label_title
-                textarea.textarea.textarea--labeled(id= id name= name placeholder="Введите текст")
+            mixin textarea(name, placeholder, title)
+                if title
+                    label.textarea__label= title
+                        textarea.textarea.textarea--labeled(name= name, placeholder= placeholder, title= title)
+                else
+                    textarea.textarea(name= name placeholder= placeholder)

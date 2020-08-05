@@ -7,7 +7,7 @@
 
     border: 1px solid #7e9bbd;
     border-radius: 6px;
-    resize: none;
+    resize: vertical;
 
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -32,13 +32,12 @@
 }
 
 .textarea--labeled {
+    margin-top: 10px;
     height: 270px;
 }
 
 .textarea__label {
     display: block;
-    margin-bottom: 10px;
-
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 16px;
