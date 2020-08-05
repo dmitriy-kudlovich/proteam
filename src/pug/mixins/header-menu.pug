@@ -2,9 +2,9 @@ mixin header-menu(links)
     nav.header-nav
         ul.header-nav_items
             each item in links
-                if item.cssClass
-                    li(class= item.cssClass)
-                        a(class= item.cssClass href= item.link)= item.name
+                if item
+                    li(class="header-nav_item")
+                        a(class="header-nav_item" href= item.link)= item.name
                 else
                     li
                         a(href= item.link)= item.name
