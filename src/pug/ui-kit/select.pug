@@ -25,6 +25,7 @@ block content
     .ui-kit__element-title.
         Название файла:
         sections/select.pug
+        mixins/select-dropdown.pug
 
     //- Распечатка кода компонента
     .ui-kit__element-code
@@ -35,12 +36,12 @@ block content
                     span.slct-svg 
                         &attributes(attributes)
                 ul.drop
-                    li
-                        a(href="#") Что делать, когда делать нечего?
-                    li
-                        a(href="#") Как отдохнуть и не обанкротиться?
-                    li
-                        a(href="#") Как кайфануть в Звенигороде?
-                    li
-                        a(href="#") Доступный отдых в ОАЭ для каждого!
+                    +select-dropdown("Что делать, когда делать нечего?", "#")
+                    +select-dropdown("Как отдохнуть и не обанкротиться?", "#")
+                    +select-dropdown("Как кайфануть в Звенигороде?", "#")
+                    +select-dropdown("Доступный отдых в ОАЭ для каждого!", "#")
                 input(type="hidden", id="select")
+
+            mixin select-dropdown(text, link)
+                li
+                    a(href= link)&attributes(attributes) #{text}
