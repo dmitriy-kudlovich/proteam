@@ -1,0 +1,45 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Комментарии - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Комментарии
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +comment("avatar.jpg", "Джейн Смитт", "05 Мая 2017 года в 15:45")
+            p Замечательный парк, обязательно отправлюсь туда этим летом.
+
+    //- //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +comment("avatar.jpg", "Джейн Смитт", "05 Мая 2017 года в 15:45")
+                p Замечательный парк, обязательно отправлюсь туда этим летом.
+
+    //- //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/comment.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin comment(avatar-name, name, date)
+                .comment
+                    .comment__avatar
+                        +avatar-mini(avatar-name, "user")
+                    .comment__content
+                        .comment__content-info
+                            .comment__content-info-user= name
+                            .watch-icon
+                                img(src="../img/icons/clock.png" alt="clock")
+                            .comment__content-info-date= date
+                        .comment__content-info-text
+                            block

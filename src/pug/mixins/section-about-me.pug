@@ -1,0 +1,12 @@
+mixin section-about-me(object)
+    .section-about-me
+        .container
+            .section-about-me__row
+                .section-about-me__img-wrapper
+                    img.section-about-me__img(src= object.filePath alt="Обо мне")
+                .section-about-me__right-column
+                    h4.section-about-me__title #{object.title}
+                    .section-about-me__text 
+                        block
+                    h4.section-about-me__title #{object.title2}
+                    +section-about-me__list(object.skills)

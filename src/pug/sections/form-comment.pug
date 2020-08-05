@@ -1,0 +1,8 @@
+form.form-comment
+	.form-comment-author
+		+avatar-mini("man.jpg", "аватар")
+	.form-comment-btn
+		.form-comment-btn__textarea
+			textarea(name="comment", cols="30", rows="10" placeholder="Введите ваш комментарий...")
+		.form-comment-btn__buttons
+			+primary-button("Комментировать")

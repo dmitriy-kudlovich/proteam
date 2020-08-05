@@ -1,0 +1,52 @@
+.comment {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-bottom: 15px;
+    width: 100%;
+    border: 1px solid #7e9bbd;
+    border-radius: 6px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.comment__avatar {
+    margin-right: 20px;
+}
+
+.comment__content-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.comment__content-info-user {
+    margin-right: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.watch-icon {
+    margin-right: 6px;
+}
+
+.comment__content-info-date {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 130%;
+    color: #7e9bbd;
+}
+
+.comment__content-info-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.comment__content-info-text p:last-child {
+    margin-bottom: 0;
+}
