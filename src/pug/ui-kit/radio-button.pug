@@ -15,16 +15,14 @@ block content
     //- Демонстрация компонента
     .ui-kit__component-demo
         .container
-            +radio-button("Заметки программиста", "prog")
-            +radio-button("Заметки путешественника", "travel")
-            +radio-button("lorem", "lorem")
+            +radio-button("radio", "Заметки программиста", "prog", "checked")
+            +radio-button("radio", "Заметки путешественника", "travel")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +radio-button("Заметки программиста", "prog")
-            +radio-button("Заметки путешественника", "travel")
-            +radio-button("lorem", "lorem")
+            +radio-button("radio", "Заметки программиста", "prog", "checked")
+            +radio-button("radio", "Заметки путешественника", "travel")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -34,6 +32,10 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin radio-button(text, id)
-                input.radio-button(type="radio" name="notes" id= id checked)
-                label.radio-button__label(for= id)= text
+            mixin radio-button(name, text, id, checked)
+                if checked
+                    input.radio-button(type="radio" name= name id= id checked=true)
+                    label.radio-button__label(for= id)= text
+                else
+                    input.radio-button(type="radio" name= name id= id)
+                    label.radio-button__label(for= id)= text
