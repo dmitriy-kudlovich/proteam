@@ -1,12 +1,10 @@
-mixin header-menu(item1, link1, item2, link2, item3, link3, item4, link4)
+mixin header-menu(links)
     nav.header-nav
         ul.header-nav_items
-            li.header-nav_item 
-                a(href=link1) #{item1}
-            li.header-nav_item 
-                a(href=link2) #{item2}
-            li.header-nav_item 
-                a(href=link3) #{item3}
-            li.header-nav_item 
-                a(href=link4) #{item4}
-                
+            each item in links
+                if item.cssClass
+                    li(class= item.cssClass)
+                        a(class= item.cssClass href= item.link)= item.name
+                else
+                    li
+                        a(href= item.link)= item.name

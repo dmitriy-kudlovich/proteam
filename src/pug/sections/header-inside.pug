@@ -1,4 +1,10 @@
 .header-inside.header
     +header-info('Digital Nomad', 'cайт IT специалиста')
-    +header-menu('Обо мне', '#', 'Портфолио', '#', 'Блог', '#', 'Контакты', '#')
+    -
+        var links = [
+                {name: "Главная", link: "index.html", cssClass: "header-nav_item"},
+                {name: "Портфолио", link: "portfolio.html", cssClass: "header-nav_item"},
+                {name: "Контакты", link: "contacts.html", cssClass: "header-nav_item"},
+            ]
+    +header-menu(links)
     
