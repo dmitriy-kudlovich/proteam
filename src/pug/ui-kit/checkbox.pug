@@ -1,0 +1,38 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Чекбоксы - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Чекбоксы
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .checkbox-wrapper
+            +checkbox('Опция 1', "styled-input-1", "checked")
+            +checkbox('Опция 2', "styled-input-2")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +checkbox('Опция 1', "styled-input-1", "checked")
+            +checkbox('Опция 2', "styled-input-2")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/checkbox.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin checkbox(text, id, checked)
+                .checkbox
+                    input(class="checkbox-input" id= id type="checkbox" value="value1" checked= checked)
+                    label(for= id)&attribute(attribute) #{text}

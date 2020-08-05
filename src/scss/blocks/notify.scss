@@ -1,0 +1,47 @@
+.notify {
+    margin-bottom: 25px;
+    width: 100%;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.notify__header {
+    padding: 14px 20px;
+    border-radius: 6px 6px 0 0;
+
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.notify__text {
+    padding: 20px;
+    border-radius: 0 0 6px 6px;
+    background-color: #eaeff2;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.notify__text p:last-child {
+    margin-bottom: 0;
+}
+
+.notify-error {
+    color: #fff;
+    background-color: #dd4e55;
+}
+
+.notify-action {
+    color: #000;
+    background-color: #f2e09f;
+}
+
+.notify-success {
+    color: #fff;
+    background-color: #61d392;
+}
+
+.notify__header--no-desc {
+    border-radius: 6px;
+}
