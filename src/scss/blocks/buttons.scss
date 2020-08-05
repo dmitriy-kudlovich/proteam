@@ -1,189 +1,189 @@
 .buttons {
-    text-align: center;
-    width: 800px;
+	text-align: center;
+	width: 800px;
 }
 
 .buttons-wrapper {
-    margin-bottom: 25px;
-    &:last-child {
-        margin-bottom: 0;
-    }
+	margin-bottom: 25px;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .primary-button {
-    padding: 13px 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    background-color: #000000;
-    border-radius: 6px;
-    color: #fff;
-    border: none;
-    outline: none;
-    transition: 0.4s ease-in;
+	padding: 13px 20px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	background-color: #000000;
+	border-radius: 6px;
+	color: #fff;
+	border: none;
+	outline: none;
+	transition: 0.4s ease-in;
 
-    &:hover {
-        background-color: #7e9bbd;
-    }
-    &:active,
-    &:focus {
-        background-color: #49525b;
-        outline: none;
-    }
+	&:hover {
+		background-color: #7e9bbd;
+	}
+	&:active,
+	&:focus {
+		background-color: #49525b;
+		outline: none;
+	}
 }
 
 .secondary-button {
-    display: inline-block;
-    padding: 13px 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-    background-color: rgba(126, 155, 189, 0.3);
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: 0.4s ease-in;
+	display: inline-block;
+	padding: 13px 20px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #000000;
+	background-color: rgba(126, 155, 189, 0.3);
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	transition: 0.4s ease-in;
 
-    &:hover {
-        background-color: rgba(71, 137, 215, 0.3);
-        text-decoration: none;
-        color: #000000;
-    }
-    &:active,
-    &:focus {
-        background-color: rgba(45, 77, 115, 0.3);
-        outline: none;
-        transition: none;
-    }
+	&:hover {
+		background-color: rgba(71, 137, 215, 0.3);
+		text-decoration: none;
+		color: #000000;
+	}
+	&:active,
+	&:focus {
+		background-color: rgba(45, 77, 115, 0.3);
+		outline: none;
+		transition: none;
+	}
 }
 
 .file-button {
-    padding: 10px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-    background-color: #eaeff2;
-    border-radius: 6px;
-    border: none;
-    outline: none;
-    transition: 0.4s ease-in;
+	padding: 10px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #000000;
+	background-color: #eaeff2;
+	border-radius: 6px;
+	border: none;
+	outline: none;
+	transition: 0.4s ease-in;
 
-    &:hover {
-        background-color: #def1fd;
-    }
-    &:active,
-    &:focus {
-        background-color: #c4d0d7;
-        outline: none;
-    }
+	&:hover {
+		background-color: #def1fd;
+	}
+	&:active,
+	&:focus {
+		background-color: #c4d0d7;
+		outline: none;
+	}
 }
 
 .watch-button {
-    display: inline-block;
-    padding: 13px 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: #1647ed;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 3px solid rgba(126, 155, 189, 0.3);
-    border-radius: 6px;
-    cursor: pointer;
-    text-decoration: none;
+	display: inline-block;
+	padding: 13px 20px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	color: #1647ed;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 3px solid rgba(126, 155, 189, 0.3);
+	border-radius: 6px;
+	cursor: pointer;
+	text-decoration: none;
 
-    &:hover {
-        text-decoration: none;
-        color: #1647ed;
-    }
+	&:hover {
+		text-decoration: none;
+		color: #1647ed;
+	}
 }
 
 .delete-button {
-    padding: 5px 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
-    background-color: #c93535;
-    border-radius: 57px;
-    outline: none;
-    border: none;
-    transition: 0.4s ease-in;
+	padding: 5px 20px;
+	font-family: Montserrat, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: #ffffff;
+	background-color: #c93535;
+	border-radius: 57px;
+	outline: none;
+	border: none;
+	transition: 0.4s ease-in;
 
-    &:hover {
-        background-color: #e81f1f;
-    }
-    &:active,
-    &:focus {
-        background-color: #a01717;
-        outline: none;
-    }
+	&:hover {
+		background-color: #e81f1f;
+	}
+	&:active,
+	&:focus {
+		background-color: #a01717;
+		outline: none;
+	}
 }
 
 .pagination-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 100%;
-    color: #000000;
-    background-color: #eaeff2;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: 0.4s ease-in;
+	display: inline-block;
+	padding: 10px 20px;
+	font-family: Montserrat, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 100%;
+	color: #000000;
+	background-color: #eaeff2;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 0.4s ease-in;
 
-    &:hover {
-        background-color: #dde8f6;
-        text-decoration: none;
-        color: #000000;
-    }
-    &:active,
-    &:focus {
-        background-color: #c3cfde;
-        outline: none;
-    }
+	&:hover {
+		background-color: #dde8f6;
+		text-decoration: none;
+		color: #000000;
+	}
+	&:active,
+	&:focus {
+		background-color: #c3cfde;
+		outline: none;
+	}
 }
 
 .post-pagination-button {
-    display: inline-block;
-    height: 50px;
-    display: flex;
+	display: inline-block;
+	height: 50px;
+	display: flex;
 }
 
 .post-pagination-button-item {
-    padding: 15px 0;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    border: 1px solid rgba(126, 155, 189, 0.3);
-    box-sizing: border-box;
-    border-radius: 0px 8px 8px 0px;
-    color: #7e9bbd;
-    text-align: center;
-    flex-grow: 1;
+	padding: 15px 0;
+	font-family: Montserrat, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	border: 1px solid rgba(126, 155, 189, 0.3);
+	box-sizing: border-box;
+	border-radius: 0px 8px 8px 0px;
+	color: #7e9bbd;
+	text-align: center;
+	flex-grow: 1;
 
-    &:hover {
-        background-color: #eff6fb;
-        border: 1px solid rgba(126, 155, 189, 0.3);
-        text-decoration: none;
-        color: #4374ad;
-    }
-    &:active,
-    &:focus {
-        color: #ffffff;
-        background-color: #9bc3dc;
-        border: 1px solid rgba(126, 155, 189, 0.3);
-        outline: none;
-    }
+	&:hover {
+		background-color: #eff6fb;
+		border: 1px solid rgba(126, 155, 189, 0.3);
+		text-decoration: none;
+		color: #4374ad;
+	}
+	&:active,
+	&:focus {
+		color: #ffffff;
+		background-color: #9bc3dc;
+		border: 1px solid rgba(126, 155, 189, 0.3);
+		outline: none;
+	}
 }
 
 .post-pagination-button-item--left {
-    border-radius: 8px 0px 0px 8px;
+	border-radius: 8px 0px 0px 8px;
 }
