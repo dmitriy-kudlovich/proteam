@@ -1,0 +1,45 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Textarea - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Textarea
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .container
+            +textarea("textarea")
+            +textarea-labeled("labeled", "Содержимое поста", "textarea-labeled")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            Textarea без ярлыка:
+            +textarea("textarea")
+
+            Textarea с ярлыком:
+            +textarea-labeled("labeled", "Содержимое поста", "textarea-labeled")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/textarea.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            Textarea без ярлыка:
+            mixin textarea(name)
+                textarea.textarea(name= name placeholder="Введите текст")
+
+            Textarea с ярлыком:
+            mixin textarea-labeled(id, label_title, name)
+                label.textarea__label(for= id)= label_title
+                textarea.textarea.textarea--labeled(id= id name= name placeholder="Введите текст")
