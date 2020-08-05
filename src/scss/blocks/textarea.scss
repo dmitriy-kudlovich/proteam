@@ -1,0 +1,47 @@
+.textarea {
+    display: block;
+    padding: 13px 22px;
+    margin-bottom: 50px;
+
+    width: 840px;
+    height: 140px;
+
+    border: 1px solid #7e9bbd;
+    border-radius: 6px;
+    resize: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:focus {
+        outline: none;
+    }
+
+    ::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.5);
+    }
+    ::-moz-placeholder {
+        color: rgba(0, 0, 0, 0.5);
+    } /* Firefox 19+ */
+    :-moz-placeholder {
+        color: rgba(0, 0, 0, 0.5);
+    } /* Firefox 18- */
+    :-ms-input-placeholder {
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.textarea--labeled {
+    height: 270px;
+}
+
+.textarea__label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
