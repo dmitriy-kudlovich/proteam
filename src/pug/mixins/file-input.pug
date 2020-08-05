@@ -1,0 +1,12 @@
+mixin file-input(title, desc, id, pic_name="")
+    .file-input-block
+        .file-input__text
+            .file-input__text-head= title
+            .file-input__text-desc= desc
+        label.file-input__label(for= id)
+            +file-button("Выбрать файл")
+            input.file-input(type="file" id= id)
+        if pic_name!=""
+            .preview-img
+                img(src="../img/preview/"+ pic_name)
+                +delete-button("Удалить")
