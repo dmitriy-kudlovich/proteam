@@ -29,6 +29,10 @@
     :-ms-input-placeholder {
         color: rgba(0, 0, 0, 0.5);
     }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .textarea--labeled {
