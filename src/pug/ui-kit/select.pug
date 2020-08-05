@@ -14,34 +14,29 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        include ../sections/select.pug
+        +select("Заметки путешественника:", "#", "Как отдохнуть и не обанкротиться?", "Как кайфануть в Звенигороде?", "Доступный отдых в ОАЭ для каждого!", "Что делать, когда делать нечего?")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            include ../sections/select.pug
+            +select("Заметки путешественника:", "#", "Как отдохнуть и не обанкротиться?", "Как кайфануть в Звенигороде?", "Доступный отдых в ОАЭ для каждого!", "Что делать, когда делать нечего?")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
         Название файла:
-        sections/select.pug
-        mixins/select-dropdown.pug
+        mixins/select.pug
 
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            .select
-                a(href="javascript:void(0);", class="slct") 
-                    span.slct-title Заметки путешественника:
-                    span.slct-svg 
-                        &attributes(attributes)
-                ul.drop
-                    +select-dropdown("Что делать, когда делать нечего?", "#")
-                    +select-dropdown("Как отдохнуть и не обанкротиться?", "#")
-                    +select-dropdown("Как кайфануть в Звенигороде?", "#")
-                    +select-dropdown("Доступный отдых в ОАЭ для каждого!", "#")
-                input(type="hidden", id="select")
-
-            mixin select-dropdown(text, link)
-                li
-                    a(href= link)&attributes(attributes) #{text}
+            mixin select(title, link, ...items)
+                .select
+                    a(href="javascript:void(0);", class="slct") 
+                        span.slct-title &attributes(attributes)
+                        span.slct-svg 
+                            &attributes(attributes)
+                    ul.drop
+                        each item in items
+                            li
+                                a(href= link)= item
+                    input(type="hidden", id="select")
