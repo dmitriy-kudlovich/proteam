@@ -1,0 +1,42 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Страница "Обо мне"';
+    - var pageClass= "";
+    - var Link1= "page-about-me.html";
+    - var Link2= "portfolio.html";
+    - var Link2= "blog.html";
+    - var Link3= "contacts.html";
+
+block content
+    //- include ../sections/header-inside.pug
+    .header-inside.header
+        +header-info('Digital Nomad', 'cайт IT специалиста')
+        -
+            var links = [
+                    {name: "Обо мне", link1: "page-about-me.html"},
+                    {name: "Портфолио", link2: "portfolio.html"},
+                    {name: "Блог", link2: "blog.html"},
+                    {name: "Контакты", link3: "contacts.html"}
+                ]
+        +header-menu(links)
+    
+    - 
+        var object ={
+                filePath: "./../img/section-about-me.jpg",
+                title: "обо мне",
+                title2: "чем могу быть полезен",
+                skills: [
+                    {text: "Верстка сайтов"}, 
+                    {text: 'Frontend'}, 
+                    {text: 'UI/UX дизайн'}
+                ]        
+            }
+ 
+    +section-about-me(object)
+        p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+
+
+
+    include ../sections/footer.pug
