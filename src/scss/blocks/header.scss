@@ -40,9 +40,11 @@
 .header-nav_item {
   display: inline-block;
   margin-right: 60px;
+
   &:last-child {
     margin-right: 0;
   }
+
   text-decoration: none;
   font-family: Montserrat;
   font-style: normal;
@@ -53,9 +55,9 @@
   color: #000000;
   transition: 0.2s ease-in;
 
-  &:hover {
+  &:hover, &--active {
     color: #ff343d;
     text-decoration: none;
   }
-}
 
+}
