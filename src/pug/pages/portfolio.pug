@@ -1,0 +1,43 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Портфолио';
+    - var pageClass= "";
+    - var pageLink= "portfolio.html"
+
+block content
+    .header-inside.header
+        +header-info('Digital Nomad', 'cайт IT специалиста')
+        -
+            var links = [
+                    {name: "Главная", link: "index.html"},
+                    {name: "Портфолио", link: "portfolio.html"},
+                    {name: "Блог", link: "blog.html"},
+                    {name: "Контакты", link: "contacts.html"}
+                ]
+        +header-menu(links)
+    main
+        .container
+            .page-portfolio-wrapper
+                .page-portfolio-wrapper__title
+                    +section-title("Портфолио") 
+                .page-portfolio-wrapper__cards
+                    .page-portfolio-wrapper__cards-item
+                        +card-project("HTML, CSS, WORDPRESS", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
+                    .page-portfolio-wrapper__cards-item
+                        +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", link="#")
+                    .page-portfolio-wrapper__cards-item
+                        +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", link="#")
+                    .page-portfolio-wrapper__cards-item
+                        +card-project("HTML, CSS, WORDPRESS", "04.jpg", "Верстка сайта для газеты “Вечерний Лондон”", link="#")
+                    .page-portfolio-wrapper__cards-item
+                        +card-project("HTML, CSS, WORDPRESS", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
+                    .page-portfolio-wrapper__cards-item
+                        +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", link="#")
+                    .page-portfolio-wrapper__cards-item
+                        +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", link="#")
+                    .page-portfolio-wrapper__cards-item
+                        +card-project("HTML, CSS, WORDPRESS", "04.jpg", "Верстка сайта для газеты “Вечерний Лондон”", link="#")
+                include ../sections/pagination.pug
+    include ../sections/footer.pug
