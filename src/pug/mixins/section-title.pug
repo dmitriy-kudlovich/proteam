@@ -1,2 +1,6 @@
-mixin section-title(text)
-    h2.section-title= text
+mixin section-title(text, link__ref="!#", link__text)
+    if link__ref && link__text
+        h2.section-title= text + " "
+            <a class= section-title__link href=#{link__ref}>#{link__text}</a>
+    else
+        h2.section-title= text

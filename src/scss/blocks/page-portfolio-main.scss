@@ -1,0 +1,46 @@
+.status-wrapper {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.page-portfolio-main__new-projects {
+    margin-bottom: 80px;
+}
+
+.page-portfolio-main__section-title {
+    margin-bottom: 40px;
+}
+
+.new-projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.new-projects .card-project {
+    margin-bottom: 40px;
+
+    &:last-child,
+    &:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+}
+
+.page-portfolio-main__new-blog {
+    margin-bottom: 90px;
+}
+
+.new-blog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.new-blog .card-post {
+    margin-right: 30px;
+    margin-bottom: 40px;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}
