@@ -1,15 +1,39 @@
 extends ../layouts/page-layout.pug
-include ./../mixins/*.pug
 
 block variables
     - var title = 'Главная страница';
-    - var pageClass= "index-page";
+    - var pageClass= "";
 
 block content
-    header.header
-        h1.mb-25 #{jsonData.siteName}
+    include ../sections/header.pug
 
-    include ./../sections/section.pug
+    main.page-main
+        //- Section About me
+        include ../sections/section-about-me.pug
 
-    footer.footer
-        h1 Footer
+        .container
+
+            //- Section status
+            section.page-main__section-status
+                include ../sections/status.pug
+
+            //- Section portfolio
+            section
+                .page-main__section-title
+                    +section-title("Новые проекты в", "portfolio.html", "портфолио")
+                .page-main__section-portfolio
+                    +card-project("HTML, CSS, wordpress", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", "#")
+                    +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", "#")
+                    +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", "#")
+                    +card-project("HTML, CSS, wordpress", "04.jpg", 'Верстка сайта для газеты “Вечерний Лондон”', "#")
+
+            //- Section blog
+            section
+                .page-main__section-title
+                    +section-title("Новые записи в", "blog.html", "блоге")
+                .page-main__section-blog
+                    +card-post("02.jpg", "02.jpg", "Как я встретил старого друга в NY и чем это закончилось")
+                    +card-post("01.jpg", "02.jpg", "Парусный спорт. 10 правил для начинающего")
+                    +card-post("03.jpg", "02.jpg", "Мое рабочее место и аксессуары в 2020 году")
+
+    include ../sections/footer.pug
