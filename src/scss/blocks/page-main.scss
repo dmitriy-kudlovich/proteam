@@ -1,23 +1,20 @@
-.status-wrapper {
+.page-main__section-status {
     padding-top: 60px;
     padding-bottom: 80px;
 }
 
-.page-portfolio-main__new-projects {
-    margin-bottom: 80px;
-}
-
-.page-portfolio-main__section-title {
+.page-main__section-title {
     margin-bottom: 40px;
 }
 
-.new-projects {
+.page-main__section-portfolio {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 80px;
 }
 
-.new-projects .card-project {
+.page-main__section-portfolio .card-project {
     margin-bottom: 40px;
 
     &:last-child,
@@ -26,17 +23,14 @@
     }
 }
 
-.page-portfolio-main__new-blog {
-    margin-bottom: 90px;
-}
-
-.new-blog {
+.page-main__section-blog {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 90px;
 }
 
-.new-blog .card-post {
+.page-main__section-blog .card-post {
     margin-right: 30px;
     margin-bottom: 40px;
 
