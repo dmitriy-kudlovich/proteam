@@ -9,5 +9,5 @@ mixin select(title, ...items)
             ul.drop
                 each item in items
                     li
-                        a(href="#")= item
-            input(type="hidden", id="select")
+                        a(href= "#")= name
+            input(type="hidden", id="select" value= value)
