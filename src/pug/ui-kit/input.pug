@@ -14,13 +14,16 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        include ../sections/input.pug
+        +input('name', 'Введите название записи', 'Заголовок поста')
+    .ui-kit__component-demo
+        +input('name', 'Ваше имя')
+        
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +input-with-title('Заголовок поста', 'Введите название записи')
-            +input-text('Ваше имя')
+            +input('name', 'Введите название записи', 'Заголовок поста')
+            +input('name', 'Ваше имя')
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -30,11 +33,10 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin input-with-title(title, text)
-                .input-title
-                    h3&attributes(attributes)
-                input(type="text" placeholder= text class="input-text")
-
-            mixin input-text(text)
-                input(type="text" placeholder= text class="input-text")
+            mixin input(name, text, title)
+                form.input-form
+                    label(for="form-title")
+                        if item = title
+                            h3.input-title&attributes(attributes)
+                    input(type="text" placeholder= text class="input-text" id="form-title" name= name)
                 

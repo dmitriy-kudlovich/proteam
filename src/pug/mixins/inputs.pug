@@ -1,7 +1,6 @@
-mixin input-with-title(title, text)
-    .input-title
-        h3 #{title}
-    input(type="text" placeholder= text class="input-text")
-
-mixin input-text(text)
-    input(type="text" placeholder= text class="input-text")
+mixin input(name, text, title)
+    form.input-form
+        label(for="form-title")
+            if item = title
+                h3.input-title #{title}
+        input(type="text" placeholder= text class="input-text" id="form-title" name= name)
