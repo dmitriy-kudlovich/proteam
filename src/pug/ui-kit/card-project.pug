@@ -14,12 +14,13 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +card-project("HTML, CSS, wordpress", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ")
+        +card-project("HTML, CSS, wordpress", "../img/cards/project-card/01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +card-project(badgeText, img, title, link="#")
+            +card-project(badgeText, "../img/cards/project-card/01.jpg", title, link="#") - ul-kit
+            +card-project(badgeText, "./img/cards/project-card/01.jpg", title, link="#") - страница
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
