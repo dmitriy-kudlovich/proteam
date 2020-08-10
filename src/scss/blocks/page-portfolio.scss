@@ -1,18 +1,19 @@
-.page-portfolio-wrapper {
+.page-portfolio {
     padding: 60px 0 90px;
 }
 
-.page-portfolio-wrapper__title {
+.page-portfolio__title {
   text-align: center;
   margin-bottom: 80px;
 }
 
-.page-portfolio-wrapper__cards {
+.page-portfolio__cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 20px;
-}
-.page-portfolio-wrapper__cards-item {
-    margin-bottom: 40px;
+    
+    .card-project {
+        margin-bottom: 40px;
+    }
 }

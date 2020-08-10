@@ -11,25 +11,17 @@ block content
     include ../sections/header-inside.pug
     main
         .container
-            .page-portfolio-wrapper
-                .page-portfolio-wrapper__title
+            .page-portfolio
+                .page-portfolio__title
                     +section-title("Портфолио") 
-                .page-portfolio-wrapper__cards
-                    .page-portfolio-wrapper__cards-item
-                        +card-project("HTML, CSS, WORDPRESS", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
-                    .page-portfolio-wrapper__cards-item
-                        +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", link="#")
-                    .page-portfolio-wrapper__cards-item
-                        +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", link="#")
-                    .page-portfolio-wrapper__cards-item
-                        +card-project("HTML, CSS, WORDPRESS", "04.jpg", "Верстка сайта для газеты “Вечерний Лондон”", link="#")
-                    .page-portfolio-wrapper__cards-item
-                        +card-project("HTML, CSS, WORDPRESS", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
-                    .page-portfolio-wrapper__cards-item
-                        +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", link="#")
-                    .page-portfolio-wrapper__cards-item
-                        +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", link="#")
-                    .page-portfolio-wrapper__cards-item
-                        +card-project("HTML, CSS, WORDPRESS", "04.jpg", "Верстка сайта для газеты “Вечерний Лондон”", link="#")
+                .page-portfolio__cards
+                    +card-project("HTML, CSS, WORDPRESS", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
+                    +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", link="#")
+                    +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", link="#")
+                    +card-project("HTML, CSS, WORDPRESS", "04.jpg", "Верстка сайта для газеты “Вечерний Лондон”", link="#")
+                    +card-project("HTML, CSS, WORDPRESS", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
+                    +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", link="#")
+                    +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", link="#")
+                    +card-project("HTML, CSS, WORDPRESS", "04.jpg", "Верстка сайта для газеты “Вечерний Лондон”", link="#")
                 include ../sections/pagination.pug
     include ../sections/footer.pug
