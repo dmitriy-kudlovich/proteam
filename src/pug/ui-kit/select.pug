@@ -1,0 +1,73 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Элемент select - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Элемент select
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo.ui-kit__component-demo--in-column
+        -
+            let select1 = [
+                {
+                    name: "Заметки путешественника",
+                    value: "travel"
+                },
+                {
+                    name: "Заметки программиста",
+                    value: "programming"
+                },
+                {
+                    name: "Заметки фотографа",
+                    value: "photo"
+                },
+            ]
+        +select("Заметки путешественника", select1)
+        -
+            let select2 = [
+                {
+                    name: "Заметки 2",
+                    value: "travel"
+                },
+                {
+                    name: "Заметки 3",
+                    value: "programming"
+                },
+                {
+                    name: "Заметки 4",
+                    value: "photo"
+                },
+            ]
+        +select("Заметки путешественника", select2)
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +select("Заметки путешественника:", "#", "Как отдохнуть и не обанкротиться?", "Как кайфануть в Звенигороде?", "Доступный отдых в ОАЭ для каждого!", "Что делать, когда делать нечего?")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/select.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin select(title, link, ...items)
+                .select
+                    a(href="javascript:void(0);", class="slct")
+                        span.slct-title &attributes(attributes)
+                        span.slct-svg
+                            &attributes(attributes)
+                    ul.drop
+                        each item in items
+                            li
+                                a(href= link)= item
+                    input(type="hidden", id="select")
