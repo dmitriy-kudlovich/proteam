@@ -13,23 +13,39 @@ block content
         Элемент select
 
     //- Демонстрация компонента
-    .ui-kit__component-demo
-    -
-        let items = [
-            {
-                name: "Заметки путешественника",
-                value: "travel"
-            },
-            {
-                name: "Заметки программиста",
-                value: "programming"
-            },
-            {
-                name: "Заметки фотографа",
-                value: "photo"
-            },
-        ]
-    +select("Заметки путешественника", items)
+    .ui-kit__component-demo.ui-kit__component-demo--in-column
+        -
+            let select1 = [
+                {
+                    name: "Заметки путешественника",
+                    value: "travel"
+                },
+                {
+                    name: "Заметки программиста",
+                    value: "programming"
+                },
+                {
+                    name: "Заметки фотографа",
+                    value: "photo"
+                },
+            ]
+        +select("Заметки путешественника", select1)
+        -
+            let select2 = [
+                {
+                    name: "Заметки 2",
+                    value: "travel"
+                },
+                {
+                    name: "Заметки 3",
+                    value: "programming"
+                },
+                {
+                    name: "Заметки 4",
+                    value: "photo"
+                },
+            ]
+        +select("Заметки путешественника", select2)
 
     //- Код для вызова компонента
     .ui-kit__component-code
@@ -46,9 +62,9 @@ block content
         pre.
             mixin select(title, link, ...items)
                 .select
-                    a(href="javascript:void(0);", class="slct") 
+                    a(href="javascript:void(0);", class="slct")
                         span.slct-title &attributes(attributes)
-                        span.slct-svg 
+                        span.slct-svg
                             &attributes(attributes)
                     ul.drop
                         each item in items
