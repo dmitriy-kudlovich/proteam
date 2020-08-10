@@ -1,0 +1,94 @@
+.file-input-block {
+    margin-bottom: 50px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.file-input {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.file-input__label:hover .file-button {
+    transition: 0.2s ease-in;
+    background-color: #def1fd;
+}
+
+.file-input__label:active .file-button,
+.file-input__label:focus .file-button {
+    transition: 0.2s ease-in;
+    background-color: #c4d0d7;
+}
+
+.file-input::-webkit-file-upload-button {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+}
+
+.file-input__label {
+    display: block;
+    position: relative;
+}
+
+.file-input__label .file-button {
+    position: absolute;
+    top: -0.5px;
+    left: 0;
+    z-index: -1;
+}
+
+.file-input__text {
+    margin-bottom: 10px;
+}
+
+.file-input__text-head {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.file-input__text-desc {
+    margin-bottom: 20px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.preview-img {
+    position: relative;
+    width: 240px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #c4c4c4;
+}
+
+.preview-img img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+
+    z-index: -1;
+}
+
+.preview-img .delete-button {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    z-index: 2;
+}

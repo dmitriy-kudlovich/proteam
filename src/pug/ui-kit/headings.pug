@@ -14,12 +14,15 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +section-title("Новые записи в блоге")
+        .container
+            +section-title("Новые записи в", "main.html", "блоге")
+            +section-title("Новые записи в блоге")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +section-title("Текст заголовка") 
+            +section-title("Новые записи в", "main.html", "блоге")
+            +section-title("Новые записи в блоге")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -29,5 +32,9 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin section-title(text)
-                h2.section-title= text
+            mixin section-title(text, link__ref="!#", link__text)
+                if link__ref && link__text
+                    h2.section-title= text + " "
+                        <a class= section-title__link href=#{link__ref}>#{link__text}</a>
+                else
+                    h2.section-title= text

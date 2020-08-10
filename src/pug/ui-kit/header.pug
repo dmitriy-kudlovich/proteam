@@ -1,0 +1,51 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Шапка
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/header.pug
+    .ui-kit__component-demo
+        include ../sections/header-inside.pug
+   
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/header.pug
+            include ../sections/header-inside.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/header-info.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+           mixin header-info(name, text)
+            .header-title #{name}
+            .header-info #{text}
+
+            mixin header-menu(item1, link1, item2, link2, item3, link3, item4, link4)
+                nav.header-nav
+                    ul.header-nav_items
+                        li.header-nav_item 
+                            a(href=link1)&attributes(attributes) 
+                        li.header-nav_item 
+                            a(href=link2)&attributes(attributes) 
+                        li.header-nav_item 
+                            a(href=link3)&attributes(attributes) 
+                        li.header-nav_item 
+                            a(href=link4)&attributes(attributes) 
+                                

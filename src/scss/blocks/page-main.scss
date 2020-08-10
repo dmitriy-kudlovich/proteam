@@ -1,0 +1,40 @@
+.page-main__section-status {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.page-main__section-title {
+    margin-bottom: 40px;
+}
+
+.page-main__section-portfolio {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.page-main__section-portfolio .card-project {
+    margin-bottom: 40px;
+
+    &:last-child,
+    &:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+}
+
+.page-main__section-blog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+}
+
+.page-main__section-blog .card-post {
+    margin-right: 30px;
+    margin-bottom: 40px;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,48 @@
+.form-comment {
+  position: relative;
+  display: flex;
+  flex-grow: 2;
+  padding: 20px;
+  background-color: #eaeff2;
+  border-radius: 8px;
+  width: auto;
+}
+
+.form-comment-author {
+  margin-right: 20px;
+}
+
+.form-comment-btn {
+  display: block;
+  width: 100%;
+}
+
+.form-comment-btn__textarea {
+  margin-bottom: 15px;
+
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 140px;
+    border-radius: 6px;
+    border: none;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    background-color: #ffffff;
+    color: #7e9bbd;
+    outline: none;
+    overflow: auto;
+    resize: vertical;
+
+    &::placeholder {
+      color: #7e9bbd;
+      font-family: Montserrat, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+}

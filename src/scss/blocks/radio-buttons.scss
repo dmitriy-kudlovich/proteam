@@ -1,0 +1,35 @@
+.radio-button {
+    display: none;
+}
+
+.radio-button__label {
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 2px;
+
+        width: 16px;
+        height: 16px;
+
+        border: 2px solid #7e9bbd;
+        border-radius: 50%;
+    }
+}
+
+.radio-button:checked + .radio-button__label::before {
+    background: url(../img/util/ellipse.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}

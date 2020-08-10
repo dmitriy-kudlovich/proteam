@@ -1,0 +1,40 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Форма комментарий - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Форма комментарий
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ../sections/form-comment.pug
+
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ../sections/form-comment.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/form-comment.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            form.form-comment
+                .form-comment-author
+                    +avatar-mini("man.jpg", "аватар")
+                .form-comment-btn
+                    .form-comment-btn__textarea
+                        textarea(name="comment", cols="30", rows="10" placeholder="Введите ваш комментарий...")
+                    .form-comment-btn__buttons
+                        +primary-button("Комментировать")
