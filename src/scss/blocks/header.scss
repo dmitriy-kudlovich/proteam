@@ -1,5 +1,4 @@
 .header {
-  width: 1440px;
   padding: 50px 0 40px;
   margin: 0 auto;
   background-color: #fff;
@@ -53,7 +52,7 @@
   color: #000000;
   transition: 0.2s ease-in;
 
-  &:hover {
+  &:hover, &--active {
     color: #ff343d;
     text-decoration: none;
   }
