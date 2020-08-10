@@ -1,0 +1,12 @@
+mixin comment(avatar_name, name, date)
+    .comment
+        .comment__avatar
+            +avatar-mini(avatar_name, "user")
+        .comment__content
+            .comment__content-info
+                .comment__content-info-user= name
+                .watch-icon
+                    img(src="../img/icons/clock.png" alt="clock")
+                .comment__content-info-date= date
+            .comment__content-info-text
+                block

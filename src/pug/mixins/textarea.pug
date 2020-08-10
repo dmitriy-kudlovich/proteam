@@ -1,0 +1,6 @@
+mixin textarea(name, placeholder, title)
+    if title
+        label.textarea__label= title
+            textarea.textarea.textarea--labeled(name= name, placeholder= placeholder, title= title)
+    else
+        textarea.textarea(name= name placeholder= placeholder)
