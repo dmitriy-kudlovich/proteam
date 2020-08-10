@@ -49,3 +49,12 @@
     /* or 31px */
     color: #000000;
 }
+
+.post__text p:last-child {
+    margin-bottom: 35px;
+}
+
+.post .post-pagination-button {
+    margin: 0 auto;
+    max-width: 920px;
+}

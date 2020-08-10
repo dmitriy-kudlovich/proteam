@@ -5,3 +5,4 @@ mixin post(title, desc, filePath="./../img/post-photo-01.jpg")
         img.post__img(src= filePath, alt="Национальный парк Йосемити")
         .post__text
             block
+        +post-pagination-button
