@@ -17,3 +17,18 @@
     font-size: 28px;
     line-height: 130%;
 }
+
+.section-title__link {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    color: #000;
+    border-bottom: 1px solid #000;
+    transition: 0.2s color ease-in;
+
+    &:hover {
+        text-decoration: none;
+        border-color: #007bff;
+    }
+}

@@ -21,12 +21,23 @@
 
 .ui-kit__component-demo {
     border: 1px dashed rgb(155, 178, 197);
-    padding: 25px 0;
+    padding: 25px 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 240px;
     margin-bottom: 25px;
+}
+
+.ui-kit__component-demo--in-column {
+    flex-direction: column;
+}
+
+.ui-kit__component-demo--in-column > * {
+    margin-bottom: 25px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .ui-kit__component-code {

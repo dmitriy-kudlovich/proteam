@@ -1,5 +1,4 @@
 extends ../layouts/page-layout.pug
-include ./../mixins/*.pug
 
 block variables
 	- var title = 'Главная страница';
@@ -21,3 +20,9 @@ block content
 				.ui-card
 					h3.mb-25 Страница "Обо мне"
 					+test-button("./page-about-me.html")
+					h3.mb-25 Портфолио
+					+test-button("./portfolio.html")
+			.col
+				.ui-card
+					h3.mb-25 Блог
+					+test-button("blog.html")
