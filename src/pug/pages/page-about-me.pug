@@ -9,20 +9,24 @@ block variables
 block content
     include ../sections/header-inside.pug
 
-    -
-        var object ={
-                filePath: "./../img/section-about-me.jpg",
-                title: "обо мне",
-                title2: "чем могу быть полезен",
-                skills: [
-                    {text: "Верстка сайтов"},
-                    {text: 'Frontend'},
-                    {text: 'UI/UX дизайн'}
-                ]
-            }
+    .section-about-me__wrapper
 
-    +section-about-me(object)
-        p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+        //- include ../sections/section-about-me.pug
+
+        -
+            var object ={
+                    filePath: "./../img/section-about-me.jpg",
+                    title: "обо мне",
+                    title2: "чем могу быть полезен",
+                    skills: [
+                        {text: "Верстка сайтов"},
+                        {text: 'Frontend'},
+                        {text: 'UI/UX дизайн'}
+                    ]
+                }
+
+        +section-about-me(object)
+            p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
 
 
 
