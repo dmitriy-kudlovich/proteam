@@ -63,16 +63,13 @@
   }
 }
 
-.order-registration__form {
-}
-
 .order-registration__form-row {
   display: flex;
   flex-grow: 1;
   margin-bottom: 20px;
 
   .textarea--labeled {
-      height: 90px;
+    height: 90px;
   }
 }
 
@@ -83,7 +80,7 @@
 }
 
 .order-registration__form-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
