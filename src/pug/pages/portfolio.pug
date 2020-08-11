@@ -1,0 +1,27 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Портфолио';
+    - var pageClass= "";
+    - var pageLink= "portfolio.html"
+    - var pageFileName= "portfolio.html"
+
+block content
+    include ../sections/header-inside.pug
+    main
+        .container
+            .page-portfolio
+                .page-portfolio__title
+                    +section-title("Портфолио") 
+                .page-portfolio__cards
+                    +card-project("HTML, CSS, WORDPRESS", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
+                    +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", link="#")
+                    +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", link="#")
+                    +card-project("HTML, CSS, WORDPRESS", "04.jpg", "Верстка сайта для газеты “Вечерний Лондон”", link="#")
+                    +card-project("HTML, CSS, WORDPRESS", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
+                    +card-project("HTML, CSS, JS, React", "02.jpg", "Сайт о спасении черепах и морской фауны. Верстка и frontend", link="#")
+                    +card-project("Figma, HTML, CSS, PHP", "03.jpg", "Квадрокоптер Phantom от Dji company. Сайт под ключ", link="#")
+                    +card-project("HTML, CSS, WORDPRESS", "04.jpg", "Верстка сайта для газеты “Вечерний Лондон”", link="#")
+                include ../sections/pagination.pug
+    include ../sections/footer.pug
