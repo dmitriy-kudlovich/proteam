@@ -10,19 +10,19 @@ block content
     include ../sections/about-me.pug
     section.contacts    
         .container
-            .contacts-raw
-                .contacts-raw-social
+            .contacts__row
+                .contacts__social
                     +section-title("Контакты")
-                    .contacts-raw-social-item
+                    .contacts__social-item
                         h4 Email: 
                             a(href="#") hi@digitalnomad.pro
-                    .contacts-raw-social-item
+                    .contacts__social-item
                         h4 Мобильный: 
                             a(href="#") +7 (905) 555-77-88
-                    .contacts-raw-social-item
+                    .contacts__social-item
                         h4 Адрес: 
                             span Москва, Пресненская набережная, д. 6, стр. 2
-                form.contacts-raw-form
+                form.contacts__form
                     +section-title("Напишите мне")
                     +input('name', 'Ваше имя')
                     +input('Email', 'Email')

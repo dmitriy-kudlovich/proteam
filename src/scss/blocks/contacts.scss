@@ -2,21 +2,21 @@
   padding: 55px 0;
 }
 
-.contacts-raw {
+.contacts__row {
   display: flex;
 }
 
-.contacts-raw-social {
+.contacts__social {
   min-width: 540px;
   margin-right: 50px;
   padding-left: 20px;
 }
 
-.contacts-raw-social .section-title {
+.contacts__social .section-title {
   margin-bottom: 25px;
 }
 
-.contacts-raw-social-item {
+.contacts__social-item {
     margin-bottom: 10px;
   h4 {
     font-family: Playfair Display, serif;
@@ -31,22 +31,22 @@
   }
 }
 
-.contacts-raw-form {
+.contacts__form {
     width: 100%;
 }
-.contacts-raw-form .section-title {
+.contacts__form .section-title {
     margin-bottom: 25px;
 }
 
-.contacts-raw-form .input-form {
+.contacts__form .input-form {
     margin-bottom: 20px;
 }
 
-.contacts-raw-form .textarea {
+.contacts__form .textarea {
     margin-bottom: 20px !important;
     height: 140px;
 }
 
-.contacts-raw-form .file-input-block {
+.contacts__form .file-input-block {
     margin-bottom: 15px !important;
 }
