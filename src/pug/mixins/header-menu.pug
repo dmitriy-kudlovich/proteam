@@ -2,9 +2,9 @@ mixin header-menu(links)
     nav.header-nav
         ul.header-nav_items
             each item in links
-                    li(class="header-nav_item")
-                        if pageFileName === item.link
-                            a(class="header-nav_item header-nav_item--active" href= item.link)= item.name
-                        else
-                            a(class="header-nav_item" href= item.link)= item.name
-
+                li(class="header-nav_item")
+                    if pageFileName === item.link
+                        a(class="header-nav_item header-nav_item--active" href= item.link)= item.name
+                    else 
+                        a(class="header-nav_item" href= item.link)= item.name
+                        

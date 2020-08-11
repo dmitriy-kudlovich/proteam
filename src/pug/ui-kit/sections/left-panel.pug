@@ -55,15 +55,13 @@
             +linkLeftPanel("Шапка", "header.html")
             +linkLeftPanel("Подвал", "footer.html")
 
-    .left-panel__section
-        .left-panel__title Страницы
-        .left-panel-nav
-            +linkLeftPanel("Портфолио", "../portfolio.html")
 
     //- Тут будут ссылки на страницы
     .left-panel__section
         .left-panel__title Страницы
         .left-panel-nav
+            +linkLeftPanel("Портфолио", "../portfolio.html")
             +linkLeftPanel('Страница "Обо мне"', "../page-about-me.html")
             +linkLeftPanel("Главная страница", "./../main.html")
             +linkLeftPanel("Блог", "./../blog.html")
+            +linkLeftPanel("Страница проекта", "./../project-quantum.html")
