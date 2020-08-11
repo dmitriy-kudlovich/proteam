@@ -28,7 +28,7 @@ block content
                         p 329 000 руб.
                 .order-registration__title--product.text-center
                     +section-title("Оформить заказ")
-                .order-registration__form
+                form(name="order-registration").order-registration__form
                     .order-registration__form-row
                         +input('name', 'Введите имя', 'Имя')
                         +input('name', 'Введите фамилию', 'Фамилия')
@@ -37,7 +37,8 @@ block content
                         +input('phone', 'Введите телефон', 'Телефон')
                     .order-registration__form-row
                         +textarea("buyer-adress", "Введите адрес доставки", "Адрес доставки")
-                    .order-registration__form-button
+                .order-registration__form-button
+                    form(action="./order-placed.html" name="push-order-placed")
                         +primary-button("Оформить заказ")
-                        +secondary-button("Вернуться в корзину", "./basket.html")
+                    +secondary-button("Вернуться в корзину", "./basket.html")
     include ../sections/footer.pug
