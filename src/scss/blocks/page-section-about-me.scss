@@ -1,0 +1,32 @@
+.section-about-me__wrapper {
+    padding: 60px 0px;
+    width: 100%;
+}
+
+.section-about-me_main-title {
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    /* or 36px */
+    text-align: center;
+}
+
+.page-section-about-me__row {
+    display: flex;
+    justify-content: flex-end;
+}
+.page-section-about-me__img-wrapper {
+    margin-right: 60px;
+}
+
+
+.section-timeline {
+    padding-bottom: 80px;
+}
+
+
+.section-status {
+    padding-bottom: 90px;
+}

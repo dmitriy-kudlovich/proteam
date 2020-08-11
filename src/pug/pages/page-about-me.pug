@@ -1,5 +1,4 @@
 extends ../layouts/page-layout.pug
-include ./../mixins/*.pug
 
 block variables
     - var title = 'Страница "Обо мне"';
@@ -7,27 +6,43 @@ block variables
     - var pageFileName= "page-about-me.html";
 
 block content
+    //- HEADER
     include ../sections/header-inside.pug
 
-    .section-about-me__wrapper
+    //- BODY
+    .container
+    
+        //- Section about-me
+        .section-about-me__wrapper
+            h1.section-about-me_main-title Обо мне 
+            +page-section-about-me( "avatar.jpg", "обо мне", "чем могу быть полезен", [{text: 'Верстка сайтов'}, {text: 'Frontend'}, {text: 'UI/UX дизайн'}])
+                p| Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!      
 
-        //- include ../sections/section-about-me.pug
+        //- Section skills 
+        .section-skills 
+            h2.section-about-me_main-title Навыки
+            .section-skills__row
+                +icon-skills("ui.svg", "UI/UX design")
+                +icon-skills("html-5.svg", "HTML5")
+                +icon-skills("css-3.svg", "CSS3")
+                +icon-skills("js.svg", "JS")
+                +icon-skills("php.svg", "PHP")
+                +icon-skills("wordpress.svg", "WordPress")
 
-        -
-            var object ={
-                    filePath: "./../img/section-about-me.jpg",
-                    title: "обо мне",
-                    title2: "чем могу быть полезен",
-                    skills: [
-                        {text: "Верстка сайтов"},
-                        {text: 'Frontend'},
-                        {text: 'UI/UX дизайн'}
-                    ]
-                }
+        //- Section timeline
+        .section-timeline
+            h2.section-about-me_main-title Опыт работы
+            .timeline
+                +timeline("февраль 2020  — по настояще время", "Frontend разработчик, Athlas IT solutions")
+                    p Работа в команде социальной сети Атлас. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов.
+                +timeline("сентябрь 2018 — Декабрь 2019", "Разработчик интерфейсов, Индекc")
+                    p Работы в проекте Индекс Аналитика. Создание новых разделов сервиса. Оптимизация и создание новых компонентов платформы.
+                +timeline("март 2015 — август 2018", "Веб-разработчик, Cloud studio")
+                    p Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазинов. Участие в разработке CRM системы “Sky CRM”. Стек используемых технологий: JS, ReactJS.
 
-        +section-about-me(object)
-            p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+        //- Section status
+        .section-status
+            include ../sections/status.pug
 
-
-
+    //- FOOTER
     include ../sections/footer.pug

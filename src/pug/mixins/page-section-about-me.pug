@@ -1,0 +1,12 @@
+mixin page-section-about-me(pic, title, title2, skills)
+    .page-section-about-me
+        .container
+            .page-section-about-me__row
+                .page-section-about-me__img-wrapper
+                    +avatar(pic, alt="avatar")
+                .section-about-me__right-column
+                    h4.section-about-me__title #{title}
+                    .section-about-me__text 
+                        block
+                    h4.section-about-me__title #{title2}
+                    +section-about-me__list(skills)
