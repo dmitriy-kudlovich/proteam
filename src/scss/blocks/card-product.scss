@@ -1,4 +1,5 @@
 .card-product {
+  position: relative;
   width: 350px;
   height: 410px;
   padding: 30px 30px 20px 30px;
@@ -16,12 +17,15 @@
 }
 
 .card-product__title {
+  display: block;
+  height: 48px;
   font-family: Montserrat, sans-serif;
   font-weight: 600 !important;
   font-size: 20px !important;
   line-height: 120%;
   color: #000000;
   transition: .2s ease-in;
+  overflow: hidden;
 
   &:hover {
     color: #000000;
