@@ -1,10 +1,10 @@
-mixin card-product(img, link, title, price)
-    div(class="card-product click" data-url= link)
-        a(href= link).card-product__img
+mixin card-product(img, link="!#", title, price)
+    a(href= link class="card-product")
+        .card-product__img
             img(src= img, alt="")
-        a(href= link).card-product__title #{title}
+        .card-product__title #{title}
         .card-product-row
             .card-product__price 
                 span #{price}
             .card-product__button
-                +watch-button("Смотреть", link)
+                .watch-button="Смотреть"

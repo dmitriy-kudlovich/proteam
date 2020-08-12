@@ -29,13 +29,13 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin card-product(img, link, title, price)
-                .card-product
-                    a(href= link).card-product__img
+            mixin card-product(img, link="!#", title, price)
+                a(href= link class="card-product")
+                    .card-product__img
                         img(src= img, alt="")
-                    a(href= link).card-product__title&attributes(attributes) #{title}
+                    .card-product__title&attributes(attributes) #{title}
                     .card-product-row
                         .card-product__price 
                             span&attributes(attributes) #{price}
                         .card-product__button
-                            +watch-button("Смотреть", link)
+                            .watch-button="Смотреть"
