@@ -1,0 +1,34 @@
+extends ../layouts/page-layout.pug
+
+block variables
+    - var title = 'Контакты';
+    - var pageClass= "";
+    - var pageFileName= "contacts.html";
+
+block content
+    include ../sections/header-inside.pug
+    include ../sections/about-me.pug
+    section.contacts    
+        .container
+            .contacts__row
+                .contacts__social
+                    +section-title("Контакты")
+                    .contacts__social-item
+                        h4 Email: 
+                            a(href="#") hi@digitalnomad.pro
+                    .contacts__social-item
+                        h4 Мобильный: 
+                            a(href="#") +7 (905) 555-77-88
+                    .contacts__social-item
+                        h4 Адрес: 
+                            span Москва, Пресненская набережная, д. 6, стр. 2
+                form.contacts__form
+                    +section-title("Напишите мне")
+                    +input('name', 'Ваше имя')
+                    +input('Email', 'Email')
+                    +textarea("Text email", "Введите текст")
+                    +file-input("Прикрепить файл:", "jpg, png, pdf, вес до 2 Мб", "file-input")
+                    +primary-button("Отправить")
+
+    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abe6b3a3b4d9ed2c07c0e609ffaedc3176b45d3628dca46cb15343c78e7fdc24f&amp;width=100%25&amp;height=536&amp;lang=ru_RU&amp;scroll=true")
+    include ../sections/footer.pug
