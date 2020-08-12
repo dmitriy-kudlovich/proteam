@@ -1,6 +1,11 @@
 .input-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+
+  label {
+    margin-bottom: 0;
+  }
 }
 
 .input-title {
@@ -15,7 +20,7 @@
 }
 
 .input-text {
-  width: 840px;
+  width: 100%;
   padding: 13px 0px 13px 20px;
   background: #ffffff;
   border: 1px solid #7e9bbd;

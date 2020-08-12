@@ -1,0 +1,52 @@
+.contacts {
+  padding: 55px 0;
+}
+
+.contacts__row {
+  display: flex;
+}
+
+.contacts__social {
+  min-width: 540px;
+  margin-right: 50px;
+  padding-left: 20px;
+}
+
+.contacts__social .section-title {
+  margin-bottom: 25px;
+}
+
+.contacts__social-item {
+    margin-bottom: 10px;
+  h4 {
+    font-family: Playfair Display, serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 170%;
+    color: #000000;
+  }
+
+  a, span {
+      font-weight: 400;
+  }
+}
+
+.contacts__form {
+    width: 100%;
+}
+.contacts__form .section-title {
+    margin-bottom: 25px;
+}
+
+.contacts__form .input-form {
+    margin-bottom: 20px;
+}
+
+.contacts__form .textarea {
+    margin-bottom: 20px !important;
+    height: 140px;
+}
+
+.contacts__form .file-input-block {
+    margin-bottom: 15px !important;
+}
