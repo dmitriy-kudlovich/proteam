@@ -1,5 +1,5 @@
 mixin card-product(img, link, title, price)
-    .card-product
+    div(class="card-product click" data-url= link)
         a(href= link).card-product__img
             img(src= img, alt="")
         a(href= link).card-product__title #{title}
