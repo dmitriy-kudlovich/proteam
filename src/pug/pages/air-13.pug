@@ -10,5 +10,18 @@ block content
     include ../sections/header-inside.pug
 
     .container
+        //- Section description
+        section.page-project__desc
+            .page-project__desc-col
+                img(src="./img/products/prod01.jpg", alt="air-13")
+            .page-project__desc-col
+                +section-title("Технологии")
+                .page-project__desc-text
+                    ul
+                        li HTML5, CSS3.
+                        li Javascript, jQuery.
+                        li LESS, PUG, Gulp, npm, bower.
+                +section-title("Ссылка на проект")
+                a(href="#!").page-project__desc-link quantum-store.ru
 
     include ../sections/footer.pug
