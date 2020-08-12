@@ -5,6 +5,7 @@
   padding: 30px 30px 20px 30px;
   background-color: #ffffff;
   box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+  cursor: pointer;
 }
 
 .card-product__img img {
@@ -45,7 +46,6 @@
   font-size: 20px;
   line-height: 120%;
   color: #7e9bbd;
-  cursor: context-menu;
 }
 
 .card-product__button .watch-button{

@@ -14,12 +14,12 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +card-product("../img/cards/card-product/01.jpg", "#", "Apple iMac 27 Вторая линия названия", "95 000 руб.")
+        +card-product("../img/cards/card-product/01.jpg", "./page-product.html", "Apple iMac 27 Вторая линия названия", "95 000 руб.")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +card-product("../img/cards/card-product/01.jpg", "#", "Apple iMac 27 Вторая линия названия", "95 000 руб.")
+            +card-product("../img/cards/card-product/01.jpg", "./page-product.html", "Apple iMac 27 Вторая линия названия", "95 000 руб.")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -38,4 +38,4 @@ block content
                         .card-product__price 
                             span&attributes(attributes) #{price}
                         .card-product__button
-                            +watch-button("Смотреть")
+                            +watch-button("Смотреть", link)
