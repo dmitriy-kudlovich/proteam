@@ -11,17 +11,20 @@ block content
 
     .container
         //- Section description
-        section.page-project__desc
-            .page-project__desc-col
-                img(src="./img/products/prod01.jpg", alt="air-13")
-            .page-project__desc-col
-                +section-title("Технологии")
-                .page-project__desc-text
-                    ul
-                        li HTML5, CSS3.
-                        li Javascript, jQuery.
-                        li LESS, PUG, Gulp, npm, bower.
-                +section-title("Ссылка на проект")
-                a(href="#!").page-project__desc-link quantum-store.ru
+        section.page-product
+            .page-product__col
+                .page-product__img
+                    img(src="./img/products/prod01.jpg", alt="air-13")
+            .page-product__col
+                .page-product__title
+                    +section-title("Apple MacBook Air 13")
+                .page-product__price 190 000 руб.
+                .page-product__button
+                    +primary-button("В корзину")
+                .page-product-text
+                    p Новый MacBook Air — ещё более тонкий и лёгкий, оснащён дисплеем Retina, клавиатурой нового поколения, трекпадом Force Touch и технологией Touch ID, которая защищает ваши данные и открывает доступ к ним только вам.
+                    p Это самый экологичный Mac. Для его корпуса используется только переработанный алюминий.1 И это невероятно удобный MacBook Air, который справится с любыми задачами.
+                    p
+                        a(href="!#") Подробнее об особенностях и преимуществах MacBook Air.
 
     include ../sections/footer.pug
