@@ -27,9 +27,13 @@ block content
                     p
                         a(href="!#") Подробнее об особенностях и преимуществах MacBook Air.
 
+        //- Section cards
         section
             .page-product__section-title
                 +section-title("Смотрите также")
             .page-product__cards
+                +card-product("../img/cards/card-product/03.jpg", "#!", "Apple Mac Pro", "150 000 руб")
+                +card-product("../img/cards/card-product/04.jpg", "#!", "Apple Mac Pro", "190 000 руб.")
+                +card-product("../img/cards/card-product/01.jpg", "#!", "Apple iMac 27 Вторая линия названия", "95 000 руб.")
 
     include ../sections/footer.pug

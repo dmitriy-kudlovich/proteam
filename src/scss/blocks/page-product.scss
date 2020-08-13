@@ -49,11 +49,12 @@
 .page-product-text a {
     color: #000;
     border-bottom: solid 1px #000;
-    transition: color 0.2s ease-in;
+    transition: 0.2s ease-in;
 
     &:hover {
         text-decoration: none;
         color: #7e9bbd;
+        border-color: #7e9bbd;
     }
 }
 
@@ -65,4 +66,12 @@
 .page-product__cards {
     display: flex;
     justify-content: center;
+    margin-bottom: 90px;
+}
+
+.card-product {
+    margin-right: 30px;
+    &:last-child {
+        margin-right: 0;
+    }
 }

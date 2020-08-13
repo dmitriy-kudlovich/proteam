@@ -14,7 +14,7 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +card-project("HTML, CSS, wordpress", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ")
+        +card-project("HTML, CSS, wordpress", "01.jpg", "Архитектурное бюро John Doe и партнеры. Сайт под ключ", link="#")
 
     //- Код для вызова компонента
     .ui-kit__component-code
@@ -31,10 +31,10 @@ block content
         pre.
             mixin card-project(badgeText, img, title, link="#")
                 .card-project
-                    .card-project__subtitle&attribute(attribute) #{badgeText}
+                    .card-project__subtitle #{badgeText}
                     a(href= link).card-project__img
-                        img(src="./img/cards/project-card/" + img, alt="project-card-img-01")
+                        img(src="../img/cards/project-card/" + img, alt="project-card-img-01")
                     .card-project__title
                         .card-project__title-item
-                            a(href= link)&attribute(attribute) #{title}
+                            a(href= link) #{title}
                     
