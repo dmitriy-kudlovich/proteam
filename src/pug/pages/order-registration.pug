@@ -1,0 +1,43 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Оформление заказа';
+    - var pageClass= "";
+    - var pageLink= "order-registration.html"
+    - var pageFileName= "shop.html"
+
+block content
+    include ../sections/header-inside.pug
+    main
+        .container
+            .order-registration
+                .order-registration__title.text-center
+                    +section-title("Состав заказа")
+                .order-registration__cart
+                    .order-registration__cart-item
+                        p Товары в заказе
+                    .order-registration__cart-item
+                        p количество
+                        p стоимость
+                .order-registration__product
+                    .order-registration__product-item
+                        a(href="./product.html") Apple MacBook Air 13, Apple watch, Mac Pro
+                    .order-registration__product-item
+                        p 3 единицы
+                        p 329 000 руб.
+                .order-registration__title--product.text-center
+                    +section-title("Оформить заказ")
+                form(name="order-registration" action="./order-placed.html").order-registration__form
+                    .order-registration__form-row
+                        +input('name', 'Введите имя', 'Имя')
+                        +input('name', 'Введите фамилию', 'Фамилия')
+                    .order-registration__form-row
+                        +input('email', 'Введите email', 'Email')
+                        +input('phone', 'Введите телефон', 'Телефон')
+                    .order-registration__form-row
+                        +textarea("buyer-adress", "Введите адрес доставки", "Адрес доставки")
+                    .order-registration__form-button
+                        +primary-button("Оформить заказ")
+                        +secondary-button("Вернуться в корзину", "./basket.html")
+    include ../sections/footer.pug
