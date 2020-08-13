@@ -1,0 +1,66 @@
+.choice-payment {
+  padding: 60px 0 460px;
+}
+
+.choice-payment__title {
+  margin-bottom: 40px;
+}
+
+.choice-payment__info {
+  margin-bottom: 16px;
+  padding: 20px 550px 20px 20px;
+  background-color: #f5f7fa;
+}
+
+.choice-payment__wrap {
+  display: flex;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.choice-payment__wrap p {
+  margin: 0;
+}
+
+.wrap-name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  color: #000;
+}
+
+.wrap-value {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  color: #7e9bbd;
+}
+
+.choice-payment__content {
+  padding: 25px 540px 30px 30px;
+  background: #ffffff;
+  box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+}
+
+.choice-payment__content-title h3 {
+    margin-bottom: 30px;
+  max-width: 540px;
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 130%;
+  color: #000000;
+}
+
+.choice-payment__radio-buttons {
+    margin-bottom: 30px;
+}
