@@ -12,7 +12,7 @@
 
 .header-title {
   margin-bottom: 10px;
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: bold;
   font-size: 38px;
@@ -28,7 +28,7 @@
 }
 
 .header-info {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -47,11 +47,13 @@
 .header-nav_item {
   display: inline-block;
   margin-right: 60px;
+
   &:last-child {
     margin-right: 0;
   }
+
   text-decoration: none;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

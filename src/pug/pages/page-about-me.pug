@@ -1,0 +1,57 @@
+extends ../layouts/page-layout.pug
+
+block variables
+    - var title = 'Страница "Обо мне"';
+    - var pageClass= "";
+    - var pageFileName= "page-about-me.html";
+
+block content
+    //- HEADER
+    include ../sections/header-inside.pug
+
+    //- BODY
+    main 
+        .container
+        
+            //- about-me
+            .page-about-me__about
+                h1.page-about-me__main-title Обо мне     
+                .page-section-about-me
+                    .page-about-me__row
+                        .page-about-me__img-wrapper
+                            +avatar("avatar.jpg", alt="avatar")
+                        .section-about-me__right-column
+                            h4.section-about-me__title обо мне
+                            .section-about-me__text 
+                                p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+                            h4.section-about-me__title чем могу быть полезен
+                            +section-about-me__list([{text: 'Верстка сайтов'}, {text: 'Frontend'}, {text: 'UI/UX дизайн'}])
+                            
+            //- skills 
+            .page-about-me__skills 
+                h2.page-about-me__main-title Навыки
+                .section-skills__row
+                    +icon-skills("ui.svg", "UI/UX design")
+                    +icon-skills("html-5.svg", "HTML5")
+                    +icon-skills("css-3.svg", "CSS3")
+                    +icon-skills("js.svg", "JS")
+                    +icon-skills("php.svg", "PHP")
+                    +icon-skills("wordpress.svg", "WordPress")
+
+            //- timeline
+            .page-about-me__timeline
+                h2.page-about-me__main-title Опыт работы
+                .timeline
+                    +timeline("февраль 2020  — по настояще время", "Frontend разработчик, Athlas IT solutions")
+                        p Работа в команде социальной сети Атлас. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов.
+                    +timeline("сентябрь 2018 — Декабрь 2019", "Разработчик интерфейсов, Индекc")
+                        p Работы в проекте Индекс Аналитика. Создание новых разделов сервиса. Оптимизация и создание новых компонентов платформы.
+                    +timeline("март 2015 — август 2018", "Веб-разработчик, Cloud studio")
+                        p Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазинов. Участие в разработке CRM системы “Sky CRM”. Стек используемых технологий: JS, ReactJS.
+
+            //- status
+            .page-about-me__status
+                include ../sections/status.pug
+
+    //- FOOTER
+    include ../sections/footer.pug
