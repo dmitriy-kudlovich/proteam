@@ -1,0 +1,36 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Выбор способа оплаты';
+    - var pageClass= "";
+    - var pageLink= "choice-payment.html"
+    - var pageFileName= "shop.html"
+
+block content
+    include ../sections/header-inside.pug
+    main
+        .container
+            .choice-payment
+                .choice-payment__title.text-center
+                    +section-title("Оплата через Яндекс.Деньги")
+                .choice-payment__info
+                    .choice-payment__wrap
+                        .wrap-name
+                            p Номер заказа:&nbsp;
+                        .wrap-value
+                            p №9
+                    .choice-payment__wrap
+                        .wrap-name
+                            p Сумма заказа:&nbsp;
+                        .wrap-value
+                            p 60 000 рублей
+                .choice-payment__content
+                    .choice-payment__content-title
+                        h3 Способ платежа
+                    .choice-payment__radio-buttons
+                        +radio-button("radio", "Банковской картой", "bank")
+                        +radio-button("radio", "Яндекс.Деньгами", "yandex")
+                    .choice-payment__button
+                        +primary-button("Перейти к оплате")
+    include ../sections/footer.pug
