@@ -1,9 +1,9 @@
-.section-about-me__wrapper {
+.page-about-me__about {
     padding: 60px 0px;
     width: 100%;
 }
 
-.section-about-me_main-title {
+.page-about-me__main-title {
     margin-bottom: 50px;
     font-family: "Playfair Display", serif;
     font-weight: 700;
@@ -13,20 +13,23 @@
     text-align: center;
 }
 
-.page-section-about-me__row {
+.page-about-me__row {
     display: flex;
     justify-content: flex-end;
 }
-.page-section-about-me__img-wrapper {
+
+.page-about-me__img-wrapper {
     margin-right: 60px;
 }
 
+.page-about-me__skills {
+    margin-bottom: 60px;
+}
 
-.section-timeline {
+.page-about-me__timeline {
     padding-bottom: 80px;
 }
 
-
-.section-status {
+.page-about-me__status {
     padding-bottom: 90px;
 }

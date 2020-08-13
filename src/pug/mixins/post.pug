@@ -1,7 +1,5 @@
-mixin post(title, desc, filePath="./../img/post-photo-01.jpg")
+mixin post(filePath="./../img/post-photo-01.jpg")
     .post
-        h1.post__title #{title}
-        h6.post__desc #{desc}
         img.post__img(src= filePath, alt="Национальный парк Йосемити")
         .post__text
             block
