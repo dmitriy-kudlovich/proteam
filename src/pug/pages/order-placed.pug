@@ -1,0 +1,19 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Заказ оформлен';
+    - var pageClass= "";
+    - var pageLink= "order-placed.html"
+    - var pageFileName= "shop.html"
+
+block content
+    include ../sections/header-inside.pug
+    main
+        .container
+            .order-placed
+                .text-center
+                    +section-title("Заказ успешно оформлен!")
+                form(class="text-center" name="order-placed" action="./payment-method.html")
+                    +primary-button("Выбрать способ оплаты")
+    include ../sections/footer.pug

@@ -1,0 +1,41 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Карточка с товаром - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Карточка с товаром
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +card-product("../img/cards/card-product/01.jpg", "./page-product.html", "Apple iMac 27 Вторая линия названия", "95 000 руб.")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +card-product("../img/cards/card-product/01.jpg", "./page-product.html", "Apple iMac 27 Вторая линия названия", "95 000 руб.")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/card-product.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin card-product(img, link="!#", title, price)
+                a(href= link class="card-product")
+                    .card-product__img
+                        img(src= img, alt="")
+                    .card-product__title&attributes(attributes) #{title}
+                    .card-product-row
+                        .card-product__price 
+                            span&attributes(attributes) #{price}
+                        .card-product__button
+                            .watch-button="Смотреть"
