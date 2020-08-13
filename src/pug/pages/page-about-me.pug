@@ -15,10 +15,18 @@ block content
         
             //- about-me
             .page-about-me__about
-                h1.page-about-me__main-title Обо мне 
-                +page-about-me( "avatar.jpg", "обо мне", "чем могу быть полезен", [{text: 'Верстка сайтов'}, {text: 'Frontend'}, {text: 'UI/UX дизайн'}])
-                    p| Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!      
-
+                h1.page-about-me__main-title Обо мне     
+                .page-section-about-me
+                    .page-about-me__row
+                        .page-about-me__img-wrapper
+                            +avatar("avatar.jpg", alt="avatar")
+                        .section-about-me__right-column
+                            h4.section-about-me__title обо мне
+                            .section-about-me__text 
+                                p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!
+                            h4.section-about-me__title чем могу быть полезен
+                            +section-about-me__list([{text: 'Верстка сайтов'}, {text: 'Frontend'}, {text: 'UI/UX дизайн'}])
+                            
             //- skills 
             .page-about-me__skills 
                 h2.page-about-me__main-title Навыки
