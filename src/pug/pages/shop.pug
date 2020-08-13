@@ -1,0 +1,24 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Оформление заказа';
+    - var pageClass= "";
+    - var pageLink= "order-registration.html"
+    - var pageFileName= "shop.html"
+
+block content
+    include ../sections/header-inside.pug
+    main
+        .container
+            .shop
+                .text-center
+                    +section-title("Магазин")
+                .shop-cards
+                    +card-product("../img/cards/card-product/01.jpg", "./page-product.html", "Apple iMac 27 Вторая линия названия", "95 000 руб.")
+                    +card-product("../img/cards/card-product/02.jpg", "./page-product.html", "Apple MacBook Air 13", "110 000 руб.")
+                    +card-product("../img/cards/card-product/03.jpg", "./page-product.html", "Apple Mac Pro", "190 000 руб.")
+                    +card-product("../img/cards/card-product/04.jpg", "./page-product.html", "Apple Mac Pro", "150 000 руб.")
+                    +card-product("../img/cards/card-product/05.jpg", "./page-product.html", "Apple iPhone X 256 ГБ «серый...", "49 000 руб.")
+                include ../sections/pagination.pug
+    include ../sections/footer.pug
