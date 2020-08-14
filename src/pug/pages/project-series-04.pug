@@ -1,0 +1,46 @@
+extends ../layouts/page-layout.pug
+
+block variables
+    - var title = 'Страница проекта';
+    - var pageClass= ""
+    - var pageFileName= "portfolio.html";
+
+block content
+    include ../sections/header-inside.pug
+    main
+        .container
+
+            //- Heading
+            .page-project__heading
+                +page-info("Верстка сайта для газеты “Вечерний Лондон”", "Апреля 2020", "работы")
+            .page-project__img
+                img(src="./img/project-img/project-04.jpg" alt="quantum")
+
+            //- Section description
+            section.page-project__desc
+                .page-project__desc-col
+                    +section-title("Кратко о проекте")
+                    .page-project__desc-text
+                        p Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.
+                        p Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.
+                    h3.page-project__desc-stat Время работы над проектом:
+                        span  6 недель
+                    h3.page-project__desc-stat Страниц сверстано:
+                        span  52 страницы
+                    h3.page-project__desc-stat Бюджет проекта:
+                        span  60 000 рублей
+                .page-project__desc-col
+                    +section-title("Технологии")
+                    .page-project__desc-text
+                        ul
+                            li HTML5, CSS3.
+                            li Javascript, jQuery.
+                            li LESS, PUG, Gulp, npm, bower.
+                    +section-title("Ссылка на проект")
+                    a(href="#!").page-project__desc-link quantum-store.ru
+
+            //- Pagination
+            .page-project__pagination
+                +post-pagination-button
+                
+    include ../sections/footer.pug
