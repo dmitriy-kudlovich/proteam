@@ -36,35 +36,38 @@
   }
 }
 
-.payment-method__content-title h3 {
+.payment-method__content-title {
   margin-bottom: 10px;
   max-width: 540px;
   width: 100%;
-  font-family: Montserrat;
-  font-style: normal;
+}
+
+.payment-method__content-title h3 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 130%;
-  color: #000000;
 }
 
 .payment-method__content p {
-  font-family: Montserrat;
-  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 170%;
 }
 
+.payment-method__vars {
+  margin-bottom: 20px;
+}
+
 .payment-method__vars-items {
-    margin-bottom: 20px;
   list-style: none;
   padding-left: 24px;
 }
 
 .payment-method__vars-items li {
   position: relative;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
