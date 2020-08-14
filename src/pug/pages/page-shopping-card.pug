@@ -12,9 +12,11 @@ block content
     //- BODY
     main 
         .container
+            //- Section page-shopping-card
             section.page-shopping-card
                 h1.page-about-me__main-title Корзина
 
+                //- First gray row
                 .page-shopping-card__row-gray
                     .page-shopping-card__row-gray-left 
                         h2.page-shopping-card__title наименование
@@ -22,16 +24,19 @@ block content
                         h2.page-shopping-card__title количество
                         h2.page-shopping-card__title стоимость
 
+                //- mixins page-shopping-card__row
                 +page-shopping-card__row("./../img/shopping-card/img-01.jpg", alt="prodactName", "Apple MacBook Air 13", "1", "110 000 руб.")
                 +page-shopping-card__row("./../img/shopping-card/img-02.jpg", alt="prodactName", "Apple watch", "1", "29 000 руб.")
                 +page-shopping-card__row("./../img/shopping-card/img-03.jpg", alt="prodactName", "Mac Pro", "1", "190 000 руб.")
 
+                //- Last total gray row
                 .page-shopping-card__row-down
                     .page-shopping-card__row-left
                     .page-shopping-card__row-down-right 
                         span.page-shopping-card__id 3 единицы
                         span.page-shopping-card__money 329 000 руб.
                 
+                //- Button to get order
                 button.page-shopping-card__button 
                     a(href="order-registration.html") Перейти к оформлению заказа
 
