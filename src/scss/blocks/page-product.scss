@@ -46,6 +46,10 @@
     line-height: 170%;
 }
 
+.page-product-text p:last-child {
+    margin-bottom: 0;
+}
+
 .page-product-text a {
     color: #000;
     border-bottom: solid 1px #000;
@@ -69,7 +73,7 @@
     margin-bottom: 90px;
 }
 
-.card-product {
+.page-product__cards .card-product {
     margin-right: 30px;
     &:last-child {
         margin-right: 0;
