@@ -1,0 +1,44 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Выбор способа оплаты';
+    - var pageClass= "";
+    - var pageLink= "payment-method.html"
+    - var pageFileName= "shop.html"
+
+block content
+    include ../sections/header-inside.pug
+    main
+        .container
+            .payment-method
+                .payment-method__title.text-center
+                    +section-title("Выберите способ оплаты")
+                .payment-method__info
+                    .payment-method__wrap
+                        .wrap-name Номер заказа:&nbsp;
+                        .wrap-value №9
+                    .payment-method__wrap
+                        .wrap-name Сумма заказа:&nbsp;
+                        .wrap-value 60 000 рублей
+                .payment-method__content
+                    .payment-method__content-title
+                        h3 Система Яндекс.Деньги
+                    p Для оплаты с помощью:
+                    .payment-method__vars
+                        ul.payment-method__vars-items
+                            li Карты Visa, MasterCard, МИР
+                            li C кошелька Яндекс.Деньги.
+                    form(action="choice-payment.html" class="payment-method__button")
+                        +primary-button("Выбрать")
+                .payment-method__content
+                    .payment-method__content-title
+                        h3 Система WebMoney
+                    p Для оплаты с помощью:
+                    .payment-method__vars
+                        ul.payment-method__vars-items
+                            li WebMoney рубли
+                            li WebMoney доллары
+                    form(action="choice-payment.html" class="payment-method__button")
+                        +primary-button("Выбрать")
+    include ../sections/footer.pug                   
