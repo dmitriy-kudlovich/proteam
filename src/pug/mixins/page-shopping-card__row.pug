@@ -1,0 +1,12 @@
+mixin page-shopping-card__row(filePath, alt="prodactName", prodactName, number, amount)
+    .page-shopping-card__row 
+        .page-shopping-card__row-left 
+            img.page-shopping-card__img(src=filePath, alt=alt)
+            h3.page-shopping-card__name #{prodactName}
+        .page-shopping-card__row-right
+            span.page-shopping-card__id #{number}
+            span.page-shopping-card__money #{amount}
+            .page-shopping-card__delete 
+                div 
+                    span.leftright
+                    span.rightleft 
