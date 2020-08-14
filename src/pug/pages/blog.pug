@@ -7,32 +7,31 @@ block variables
 
 block content
     include ../sections/header-inside.pug
+    main
+        .container
 
-    .container
+            //- Heading
+            section.page-blog
+                .page-blog__title
+                    +section-title("Блог")
 
-        //- Heading
-        section.page-blog
-            .page-blog__title
-                +section-title("Блог")
+                //- Blog-cards
+                .page-blog__cards
+                    +card-post("11.jpg", "11.jpg", "Национальный парк Йосемити", "blog-post.html")
+                    +card-post("01.jpg", "02.jpg", "Как я встретил старого друга в NY и чем это закончилось")
+                    +card-post("02.jpg", "01.jpg", "Парусный спорт. 10 правил для начинающего")
+                    +card-post("03.jpg", "03.jpg", "Мое рабочее место и аксессуары в 2020 году")
+                    +card-post("04.jpg", "04.jpg", "Весна в моем городе")
+                    +card-post("05.jpg", "05.jpg", "10 инструментов для продуктивности за ноутбуком")
+                    +card-post("06.jpg", "06.jpg", "Мои топ 10 треков с радио за 2019 год")
+                    +card-post("07.jpg", "07.jpg", "Аксессуары которые я всегда беру с собой")
+                    +card-post("08.jpg", "08.jpg", "Фотосессия. Сентябрь 2019")
+                    +card-post("09.jpg", "09.jpg", "Обзор коворкингов в МСК")
+                    +card-post("10.jpg", "10.jpg", "Как устроена подземка в NY. Плюсы и минусы")
+                    +card-post("12.jpg", "12.jpg", "Купил дрон. Впечатления и фотосессия")
 
-            //- Blog-cards
-            .page-blog__cards
-                +card-post("11.jpg", "11.jpg", "Национальный парк Йосемити", "blog-post.html")
-                +card-post("01.jpg", "02.jpg", "Как я встретил старого друга в NY и чем это закончилось")
-                +card-post("02.jpg", "01.jpg", "Парусный спорт. 10 правил для начинающего")
-                +card-post("03.jpg", "03.jpg", "Мое рабочее место и аксессуары в 2020 году")
-                +card-post("04.jpg", "04.jpg", "Весна в моем городе")
-                +card-post("05.jpg", "05.jpg", "10 инструментов для продуктивности за ноутбуком")
-                +card-post("06.jpg", "06.jpg", "Мои топ 10 треков с радио за 2019 год")
-                +card-post("07.jpg", "07.jpg", "Аксессуары которые я всегда беру с собой")
-                +card-post("08.jpg", "08.jpg", "Фотосессия. Сентябрь 2019")
-                +card-post("09.jpg", "09.jpg", "Обзор коворкингов в МСК")
-                +card-post("10.jpg", "10.jpg", "Как устроена подземка в NY. Плюсы и минусы")
-                +card-post("12.jpg", "12.jpg", "Купил дрон. Впечатления и фотосессия")
-
-            //- Pagination
-            .page-blog__pagination
-                include ../sections/pagination.pug
+                //- Pagination
+                .page-blog__pagination
+                    include ../sections/pagination.pug
 
     include ../sections/footer.pug
-    

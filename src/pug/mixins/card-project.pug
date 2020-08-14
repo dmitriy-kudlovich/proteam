@@ -2,7 +2,7 @@ mixin card-project(badgeText, img, title, link="#")
     .card-project
         .card-project__subtitle #{badgeText}
         a(href= link).card-project__img
-            img(src="./img/cards/project-card/" + img, alt="project-card-img-01")
+            img(src="../img/cards/project-card/" + img, alt="project-card-img-01")
         .card-project__title
             .card-project__title-item
                 a(href= link) #{title}
