@@ -18,11 +18,12 @@ block content
 
                 //- First gray row
                 .page-shopping-card__row-gray
-                    .page-shopping-card__row-gray-left 
-                        h2.page-shopping-card__title наименование
-                    .page-shopping-card__row-gray-right
-                        h2.page-shopping-card__title количество
-                        h2.page-shopping-card__title стоимость
+                    //- Всё должно быть колонками; один столбец - одна колонка
+                    //- .page-shopping-card__row-gray-left 
+                    h2.page-shopping-card__title наименование
+                    //- .page-shopping-card__row-gray-right
+                    h2.page-shopping-card__title количество
+                    h2.page-shopping-card__title стоимость
 
                 //- mixins page-shopping-card__row
                 +page-shopping-card__row("./../img/shopping-card/img-01.jpg", alt="prodactName", "Apple MacBook Air 13", "1", "110 000 руб.")

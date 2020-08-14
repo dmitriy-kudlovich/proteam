@@ -4,14 +4,18 @@
 }
 
 .page-shopping-card__row-gray {
-    padding: 20px;
+    // padding: 20px;
+    padding: 20px 190px;
+
     display: flex;
     background-color: #EAEFF2;
 }
 
 .page-shopping-card__row {
-    margin-top: 20px;
-    padding: 0 74px 20px 0px;
+    // margin-top: 20px;
+    // padding: 0 74px 20px 0px;
+
+    padding: 20px 30px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(126, 155, 189, 0.3);
@@ -23,31 +27,39 @@
     /* or 23px */
 }
 
-.page-shopping-card__row-gray-left {
-    min-width: 50%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-} 
+// Не нужен класс
+// .page-shopping-card__row-gray-left {
+//     min-width: 50%;
+//     display: flex;
+//     text-align: center;
+//     justify-content: center;
+//     align-items: center;
+// } 
 
-.page-shopping-card__row-left {
-    min-width: 50%;
-    display: flex;
-    // text-align: center;
-    // justify-content: center;
-    justify-content: start;
-    align-items: center;
-    justify-content: flex-start;
-}
+// Не нужен класс
+// .page-shopping-card__row-left {
+//     min-width: 50%;
+//     display: flex;
+//     // text-align: center;
+//     // justify-content: center;
+//     justify-content: start;
+//     align-items: center;
+//     justify-content: flex-start;
+// }
 
+// Описание данного класса повторяется далее.
 .page-shopping-card__img {
     width: 100px;
     height: 100px;
-    img {display: block;}
+    // Изначально в базовых стилях все картинки - блоки
+    // img {display: block;}
 }
 
 .page-shopping-card__title {
+    // сделать block
+    display: block;
+
+    // 
     margin-right: 65px;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -60,26 +72,34 @@
     &:last-child {margin-right: 0;}
 }
 
-.page-shopping-card__row-gray-right {
-    min-width: 50%;
-    display: flex;
-    justify-content: flex-start;
-}
+// не нужен класс
+// .page-shopping-card__row-gray-right {
+//     min-width: 50%;
+//     display: flex;
+//     justify-content: flex-start;
+// }
 
-.page-shopping-card__row-right {
-    min-width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+// не нужен класс
+// .page-shopping-card__row-right {
+//     min-width: 50%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
 
 .page-shopping-card__img {
+    // переместить наверх
     margin-right: 60px;
-    margin-bottom: 20px;
-    margin-left: 30px;
+    // margin-bottom: 20px;
+    // margin-left: 30px;
 }
 
 .page-shopping-card__name {
+    // Сделать блоком заголовок; ограничиваем по ширине, делаем отступ вправо
+    display: block;
+    margin-right: 169px;
+    width: 210px;
+
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -87,7 +107,19 @@
 }
 
 .page-shopping-card__id {
-    margin-left: 44px;
+    // Убираем отступ
+    // margin-left: 44px;
+
+    // Добавляем:
+    margin-right: 70px;
+    width: 120px;
+
+}
+
+// Добавить стили для класса
+.page-shopping-card__money {
+    margin-right: 140px;
+    width: 120px;
 }
 
 .page-shopping-card__row-down {

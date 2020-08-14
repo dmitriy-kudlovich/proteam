@@ -1,12 +1,24 @@
 mixin page-shopping-card__row(filePath, alt="prodactName", prodactName, number, amount)
-    .page-shopping-card__row 
-        .page-shopping-card__row-left 
-            img.page-shopping-card__img(src=filePath, alt=alt)
-            h3.page-shopping-card__name #{prodactName}
-        .page-shopping-card__row-right
-            span.page-shopping-card__id #{number}
-            span.page-shopping-card__money #{amount}
-            .page-shopping-card__delete 
-                div 
-                    span.leftright
-                    span.rightleft 
+    .page-shopping-card__row
+        //- Убираем из блока изображение и наменование товара, картинку помещаем в блок
+        //- .page-shopping-card__row-left
+        .page-shopping-card__img
+            img(src=filePath, alt=alt)
+        h3.page-shopping-card__name #{prodactName}
+        //- Не нужен блок row-right
+        //- .page-shopping-card__row-right
+
+        //- Зачем span?
+        //- span.page-shopping-card__id #{number}
+        //- span.page-shopping-card__money #{amount}
+        .page-shopping-card__id #{number}
+        .page-shopping-card__money #{amount}
+        .page-shopping-card__delete
+            //- div для анимации
+            div 
+                span.leftright
+                span.rightleft 
+
+//- Правильно пишется product
+//- amount - количество
+//- вместо number - prise
