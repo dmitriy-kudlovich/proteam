@@ -148,6 +148,7 @@
 }
 
 .page-shopping-card__button {
+    display: inline-block;
     margin-top: 20px;
     padding: 13px 20px;
     font-family: "Montserrat", sans-serif;
@@ -163,6 +164,8 @@
 
     &:hover {
         background-color: #7e9bbd;
+        color: #fff;
+        text-decoration: none;
     }
     &:active,
     &:focus {
