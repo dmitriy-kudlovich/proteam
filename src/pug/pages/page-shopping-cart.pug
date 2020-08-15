@@ -1,0 +1,39 @@
+extends ../layouts/page-layout.pug
+
+block variables
+    - var title = 'Корзина';
+    - var pageClass= "";
+    - var pageFileName= "shop.html";
+
+block content
+    //- HEADER
+    include ../sections/header-inside.pug
+
+    //- BODY
+    main 
+        .container
+            //- Section page-shopping-card
+            section.page-shopping-cart
+                h1.page-about-me__main-title Корзина
+
+                //- First gray row
+                .page-shopping-cart__row-gray
+                    h2.page-shopping-cart__title наименование
+                    h2.page-shopping-cart__title количество
+                    h2.page-shopping-cart__title стоимость
+
+                //- mixins page-shopping-card__row
+                +page-shopping-cart__row("./../img/shopping-cart/img-01.jpg", alt="productName", "air-13.html", "Apple MacBook Air 13", "1", "110 000 руб.")
+                +page-shopping-cart__row("./../img/shopping-cart/img-02.jpg", alt="productName", "#","Apple watch", "1", "29 000 руб.")
+                +page-shopping-cart__row("./../img/shopping-cart/img-03.jpg", alt="productName", "#", "Mac Pro", "1", "190 000 руб.")
+
+                //- Last total gray row
+                .page-shopping-cart__row-down
+                    .page-shopping-cart__id 3 единицы
+                    .page-shopping-cart__money 329 000 руб.
+                
+                //- Button to get order
+                a.page-shopping-cart__button(href="order-registration.html") Перейти к оформлению заказа
+
+    //- FOOTER
+    include ../sections/footer.pug

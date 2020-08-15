@@ -1,0 +1,12 @@
+mixin page-shopping-cart__row(filePath, alt="productName", filePath2, productName, quantity, price)
+    .page-shopping-cart__row 
+        .page-shopping-cart__img
+            img(src=filePath, alt=alt)
+        .page-shopping-cart__name
+            a(href=filePath2) #{productName}
+        .page-shopping-cart__id #{quantity}
+        .page-shopping-cart__money #{price}
+        .page-shopping-cart__delete 
+            div 
+                span.leftright
+                span.rightleft 
