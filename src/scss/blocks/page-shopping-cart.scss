@@ -1,17 +1,16 @@
-.page-shopping-card {
+.page-shopping-cart {
     padding: 60px 0 90px;
     width: 100%;
 }
 
-.page-shopping-card__row-gray {
+.page-shopping-cart__row-gray {
     padding: 20px;
     display: flex;
     background-color: #EAEFF2;
 }
 
-.page-shopping-card__row {
-    margin-top: 20px;
-    padding: 0 74px 20px 0px;
+.page-shopping-cart__row {
+    padding: 20px 74px 20px 0px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(126, 155, 189, 0.3);
@@ -23,7 +22,7 @@
     /* or 23px */
 }
 
-.page-shopping-card__row-gray-left {
+.page-shopping-cart__row-gray-left {
     min-width: 50%;
     display: flex;
     text-align: center;
@@ -31,23 +30,21 @@
     align-items: center;
 } 
 
-.page-shopping-card__row-left {
+.page-shopping-cart__row-left {
     min-width: 50%;
     display: flex;
-    // text-align: center;
-    // justify-content: center;
     justify-content: start;
     align-items: center;
     justify-content: flex-start;
 }
 
-.page-shopping-card__img {
+.page-shopping-cart__img {
     width: 100px;
     height: 100px;
     img {display: block;}
 }
 
-.page-shopping-card__title {
+.page-shopping-cart__title {
     margin-right: 65px;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -60,37 +57,45 @@
     &:last-child {margin-right: 0;}
 }
 
-.page-shopping-card__row-gray-right {
+.page-shopping-cart__row-gray-right {
     min-width: 50%;
     display: flex;
     justify-content: flex-start;
 }
 
-.page-shopping-card__row-right {
+.page-shopping-cart__row-right {
+    padding-left: 44px;
     min-width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.page-shopping-card__img {
+// .page-shopping-cart__id {margin-left: 44px;}
+
+.page-shopping-cart__img {
     margin-right: 60px;
     margin-bottom: 20px;
     margin-left: 30px;
 }
 
-.page-shopping-card__name {
+.page-shopping-cart__name {
+    display: inline-block;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 130%;
+    color: #000000;
+    transition: 0.5s;
+
+    &:hover {
+        color: #000000;
+        text-decoration: underline;
+        transition: 0.5s;
+    }
 }
 
-.page-shopping-card__id {
-    margin-left: 44px;
-}
-
-.page-shopping-card__row-down {
+.page-shopping-cart__row-down {
     padding: 20px 74px 20px 0px;
 
     display: flex;
@@ -104,18 +109,20 @@
     /* or 23px */
 }
 
-.page-shopping-card__row-down-right {
+.page-shopping-cart__row-down-right {
+    padding-left: 44px;
     min-width: 50%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.page-shopping-card__row-down-right .page-shopping-card__id {
+.page-shopping-cart__row-down-right .page-shopping-cart__id {
     margin-right: 75px;
 }
 
-.page-shopping-card__button {
+.page-shopping-cart__button {
+    display: inline-block;
     margin-top: 20px;
     padding: 13px 20px;
     font-family: "Montserrat", sans-serif;
@@ -128,25 +135,22 @@
     border: none;
     outline: none;
     transition: 0.4s ease-in;
+    text-decoration: none;
 
     &:hover {
         background-color: #7e9bbd;
+        text-decoration: none;
+        color: white;
     }
     &:active,
     &:focus {
         background-color: #49525b;
         outline: none;
     }
-
-    a {
-        text-decoration: none;
-        color: white;
-        font-family: "Montserrat", sans-serif;
-    }
 }
 
 //кнопка удалить (крестик) из списка товаров
-.page-shopping-card__delete {
+.page-shopping-cart__delete {
     // margin: 5px;
     display: flex;
     justify-content: center;
@@ -159,7 +163,7 @@
     }
 }
 
-.page-shopping-card__delete .leftright {
+.page-shopping-cart__delete .leftright {
     height: 2px;
     width: 15px;
     position: absolute;
@@ -170,7 +174,7 @@
     transition: all .3s ease-in;
 }
 
-.page-shopping-card__delete .rightleft {
+.page-shopping-cart__delete .rightleft {
     height: 2px;
     width: 15px;
     position: absolute;
@@ -181,12 +185,12 @@
     transition: all .3s ease-in;
 }
 
-.page-shopping-card__delete div:hover .leftright {
+.page-shopping-cart__delete div:hover .leftright {
     transform: rotate(-45deg);
     background-color: #000;
 }
 
-.page-shopping-card__delete div:hover .rightleft {
+.page-shopping-cart__delete div:hover .rightleft {
     transform: rotate(45deg);
     background-color: #000;
 }
