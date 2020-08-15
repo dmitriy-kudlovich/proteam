@@ -40,6 +40,13 @@
     margin-bottom: 53px;
 }
 
+.page-product__button a {
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
 .page-product-text {
     font-family: "Playfair Display", serif;
     font-size: 18px;
