@@ -37,7 +37,13 @@
 }
 
 .page-product__button {
+    display: inline-block;
     margin-bottom: 53px;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 .page-product__button a {
