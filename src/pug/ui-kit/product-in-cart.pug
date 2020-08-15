@@ -1,0 +1,43 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Товар в корзине';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Товар в корзине
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +page-shopping-cart__row("./../img/shopping-cart/img-01.jpg", alt="productName", "air-13.html", "Apple MacBook Air 13", "1", "110 000 руб.")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +page-shopping-cart__row(filePath, alt="productName", filePath2, productName, quantity, price)
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/page-shopping-cart__row.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin page-shopping-cart__row(filePath, alt="productName", filePath2, productName, quantity, price)
+                .page-shopping-cart__row 
+                    .page-shopping-cart__img
+                        img(src=filePath, alt=alt)
+                    .page-shopping-cart__name
+                        a(href=filePath2) # {productName}
+                    .page-shopping-cart__id # {quantity}
+                    .page-shopping-cart__money # {price}
+                    .page-shopping-cart__delete 
+                        div 
+                            span.leftright
+                            span.rightleft 
